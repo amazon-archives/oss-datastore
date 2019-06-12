@@ -1,0 +1,11 @@
+{
+  "database": {
+    "db_name": "",
+    "endpoint": "",
+    "password": "",
+    "port": 5432,
+    "user": ""
+  },
+  "github_token": "",
+  "github_orgs": []
+}
