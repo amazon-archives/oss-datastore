@@ -6,7 +6,7 @@ GitHub doesn't keep information around indefinitely but for a short amount of ti
 
 To get around this, the OSS-Datastore establishes a pipeline for ingesting data from the GitHub APIs, runs ETL (extract/transform/load) operations, store data into Redshift using the [data vault modeling](https://en.wikipedia.org/wiki/Data_vault_modeling) technique, and establish a base set of information/data marts for end user analysis and consumption. This modeling technique moves data from multiple sources to a staging area, ETL actions store that data into the data vault, and the data is then spun out into infomarts which are where the end users actually interacts with the data. Below is a really bad diagram to demonstrate the flow of data through the system.
 
-<img src="docs/images/GH_Data_Vault_Overview.jpg" alt="overview">
+![overview](docs/images/GH_Data_Vault_Overview.jpg)
 
 Items that will be tracked include:
 
