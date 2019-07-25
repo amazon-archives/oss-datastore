@@ -19,12 +19,16 @@ Items that will be tracked include:
 * Tracking user (member and external colalborator) access levels
 * Security issues in a repo and its dependencies
 
-This isn't the definitive list of information that will be tracked and will expand as the package grows. and the tentative data model can be found in <a href="docs/images/GH_Data_Vault_Layout.jpeg">docs/images/GH_Data_Vault_Layout.jpeg</a>
+This isn't the definitive list of information that will be tracked and will expand as the package grows. and the tentative data model can be found in ![overview](docs/images/GH_Data_Vault_Layout.jpeg)
 
 ## Setup
 You need to have pipenv installed locally
 
 > `pip install --user pipenv`
+
+To activate shell:
+
+> `pipenv shell`
 
 To install new runtime dependencies 
 
@@ -33,10 +37,6 @@ To install new runtime dependencies
 To install new dev dependencies 
 
 > `pipenv install <package name> --dev`
-
-To activate shell:
-
-> `pipenv shell`
 
 Ensure you have filled out the information in Config.py and run
 
@@ -53,7 +53,7 @@ Ensure you have filled out the information in Config.py and run
      * [X] Store data when requests fail
      * [ ] Monitoring and alerting on dead letter queue
    * [ ] Cron job to kick-off new data requests
-* [ ] Refine <a href="docs/images/GH_Data_Vault_Layout.jpeg">data vault model</a>
+* [ ] Refine data vault model in docs/images/GH_Data_Vault_Layout.jpeg
 * [ ] Data warehouse construction via AWS Cloudformation
     * [ ] Define and build the hubs
     * [ ] Define and build the links

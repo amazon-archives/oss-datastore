@@ -4,9 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pylint = "*"
 mock = "*"
 boto3 = "*"
+black = "*"
+pre-commit = "*"
 
 [packages]
 requests = "*"
@@ -15,3 +16,6 @@ pygresql = "*"
 
 [requires]
 python_version = "3.6"
+
+[pipenv]
+allow_prereleases = true

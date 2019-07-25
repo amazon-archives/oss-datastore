@@ -1,0 +1,108 @@
+{
+  "data": {
+    "organization": {
+      "repository": {
+        "name": "oss-contribution-tracker",
+        "nameWithOwner": "amzn/oss-contribution-tracker",
+        "vulnerabilityAlerts": {
+          "edges": [
+            {
+              "cursor": "Y3Vyc29yOnYyOpHOBNNaIg==",
+              "node": {
+                "dismissReason": null,
+                "dismissedAt": null,
+                "id": "MDI4OlJlcG9zaXRvcnlWdWxuZXJhYmlsaXR5QWxlcnQ4MDk2MDAzNA==",
+                "securityVulnerability": {
+                  "advisory": {
+                    "description": "In Bootstrap 4 before 4.3.1 and Bootstrap 3 before 3.4.1, XSS is possible in the tooltip or popover data-template attribute. For more information, see: https://blog.getbootstrap.com/2019/02/13/bootstrap-4-3-1-and-3-4-1/",
+                    "id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXdoNzctM3g0bS00cTln",
+                    "publishedAt": "2019-02-22T20:54:27Z",
+                    "severity": "MODERATE",
+                    "summary": "Moderate severity vulnerability that affects bootstrap and bootstrap-sass"
+                  },
+                  "firstPatchedVersion": {
+                    "identifier": "4.3.1"
+                  },
+                  "package": {
+                    "ecosystem": "NPM",
+                    "name": "bootstrap"
+                  },
+                  "severity": "MODERATE",
+                  "updatedAt": "2019-02-22T20:53:13Z",
+                  "vulnerableVersionRange": ">= 4.0.0, < 4.3.1"
+                },
+                "vulnerableManifestFilename": "package-lock.json",
+                "vulnerableManifestPath": "package-lock.json",
+                "vulnerableRequirements": "= 4.2.1"
+              }
+            },
+            {
+              "cursor": "Y3Vyc29yOnYyOpHOBuqPJw==",
+              "node": {
+                "dismissReason": null,
+                "dismissedAt": null,
+                "id": "MDI4OlJlcG9zaXRvcnlWdWxuZXJhYmlsaXR5QWxlcnQxMTYwMzUzNjc=",
+                "securityVulnerability": {
+                  "advisory": {
+                    "description": "Affected versions of lodash are vulnerable to Prototype Pollution. \nThe function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+                    "id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWpmODUtY3BjcC1qNjk1",
+                    "publishedAt": "2019-07-10T19:45:23Z",
+                    "severity": "HIGH",
+                    "summary": "High severity vulnerability that affects lodash, lodash-es, lodash-amd, lodash.template, lodash.merge, lodash.mergewith, and lodash.defaultsdeep"
+                  },
+                  "firstPatchedVersion": {
+                    "identifier": "4.17.14"
+                  },
+                  "package": {
+                    "ecosystem": "NPM",
+                    "name": "lodash-es"
+                  },
+                  "severity": "HIGH",
+                  "updatedAt": "2019-07-10T19:41:12Z",
+                  "vulnerableVersionRange": "< 4.17.14"
+                },
+                "vulnerableManifestFilename": "package-lock.json",
+                "vulnerableManifestPath": "package-lock.json",
+                "vulnerableRequirements": "= 4.17.11"
+              }
+            },
+            {
+              "cursor": "Y3Vyc29yOnYyOpHOBwNIiA==",
+              "node": {
+                "dismissReason": null,
+                "dismissedAt": null,
+                "id": "MDI4OlJlcG9zaXRvcnlWdWxuZXJhYmlsaXR5QWxlcnQxMTc2NTU2ODg=",
+                "securityVulnerability": {
+                  "advisory": {
+                    "description": "Affected versions of lodash are vulnerable to Prototype Pollution. \nThe function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+                    "id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWpmODUtY3BjcC1qNjk1",
+                    "publishedAt": "2019-07-10T19:45:23Z",
+                    "severity": "HIGH",
+                    "summary": "High severity vulnerability that affects lodash, lodash-es, lodash-amd, lodash.template, lodash.merge, lodash.mergewith, and lodash.defaultsdeep"
+                  },
+                  "firstPatchedVersion": {
+                    "identifier": "4.17.13"
+                  },
+                  "package": {
+                    "ecosystem": "NPM",
+                    "name": "lodash"
+                  },
+                  "severity": "HIGH",
+                  "updatedAt": "2019-07-10T19:41:12Z",
+                  "vulnerableVersionRange": "< 4.17.13"
+                },
+                "vulnerableManifestFilename": "package-lock.json",
+                "vulnerableManifestPath": "package-lock.json",
+                "vulnerableRequirements": "= 4.17.11"
+              }
+            }
+          ],
+          "pageInfo": {
+            "endCursor": "Y3Vyc29yOnYyOpHOBwNIiA==",
+            "hasNextPage": false
+          }
+        }
+      }
+    }
+  }
+}
