@@ -8,43 +8,51 @@ class CVE:
         self, org, repo_last="", repo_count_new=100, cve_count=100
     ):
         query = """
-      query {{
-        organization(login: "{org_name}") {{
-          repositories(first: {repo_count} after: "{repo_cursor}") {{
-            edges {{
-              node {{
-                owner {{
-                  id
-                }}
-                name
-                vulnerabilityAlerts ( first: {cve_count}) {{
+            query {{
+              organization(login: "{org_name}") {{
+                repositories(first: {repo_count} after: "{repo_cursor}") {{
                   edges {{
                     node {{
-                      dismissReason
-                      dismissedAt
-                      id
-                      securityVulnerability {{
-                        advisory {{
-                          description
-                          id
-                          publishedAt
-                          severity
-                          summary
-                        }}
-                        firstPatchedVersion {{
-                          identifier
-                        }}
-                        package {{
-                          ecosystem
-                          name
-                        }}
-                        severity
-                        updatedAt
-                        vulnerableVersionRange
+                      owner {{
+                        id
                       }}
-                      vulnerableManifestFilename
-                      vulnerableManifestPath
-                      vulnerableRequirements
+                      name
+                      vulnerabilityAlerts ( first: {cve_count}) {{
+                        edges {{
+                          node {{
+                            dismissReason
+                            dismissedAt
+                            id
+                            securityVulnerability {{
+                              advisory {{
+                                description
+                                id
+                                publishedAt
+                                severity
+                                summary
+                              }}
+                              firstPatchedVersion {{
+                                identifier
+                              }}
+                              package {{
+                                ecosystem
+                                name
+                              }}
+                              severity
+                              updatedAt
+                              vulnerableVersionRange
+                            }}
+                            vulnerableManifestFilename
+                            vulnerableManifestPath
+                            vulnerableRequirements
+                          }}
+                          cursor
+                        }}
+                        pageInfo {{
+                          endCursor
+                          hasNextPage
+                        }}
+                      }}
                     }}
                     cursor
                   }}
@@ -54,16 +62,8 @@ class CVE:
                   }}
                 }}
               }}
-              cursor
             }}
-            pageInfo {{
-              endCursor
-              hasNextPage
-            }}
-          }}
-        }}
-      }}
-    """.format(
+          """.format(
             org_name=org,
             repo_cursor=repo_last,
             repo_count=repo_count_new,
@@ -76,51 +76,51 @@ class CVE:
         if len(cve_last) > 0:
             cve_last = 'after: "{}"'.format(cve_last)
         query = """
-      query {{
-        organization(login: "{org_name}") {{
-          repository(name: "{repo_name}") {{
-            name
-            nameWithOwner
-            vulnerabilityAlerts ( first: {cve_count} {cve_cursor}) {{
-              edges {{
-                node {{
-                  dismissReason
-                  dismissedAt
-                  id
-                  securityVulnerability {{
-                    advisory {{
-                      description
-                      id
-                      publishedAt
-                      severity
-                      summary
+            query {{
+              organization(login: "{org_name}") {{
+                repository(name: "{repo_name}") {{
+                  name
+                  nameWithOwner
+                  vulnerabilityAlerts ( first: {cve_count} {cve_cursor}) {{
+                    edges {{
+                      node {{
+                        dismissReason
+                        dismissedAt
+                        id
+                        securityVulnerability {{
+                          advisory {{
+                            description
+                            id
+                            publishedAt
+                            severity
+                            summary
+                          }}
+                          firstPatchedVersion {{
+                            identifier
+                          }}
+                          package {{
+                            ecosystem
+                            name
+                          }}
+                          severity
+                          updatedAt
+                          vulnerableVersionRange
+                        }}
+                        vulnerableManifestFilename
+                        vulnerableManifestPath
+                        vulnerableRequirements
+                      }}
+                      cursor
                     }}
-                    firstPatchedVersion {{
-                      identifier
+                    pageInfo {{
+                      endCursor
+                      hasNextPage
                     }}
-                    package {{
-                      ecosystem
-                      name
-                    }}
-                    severity
-                    updatedAt
-                    vulnerableVersionRange
                   }}
-                  vulnerableManifestFilename
-                  vulnerableManifestPath
-                  vulnerableRequirements
                 }}
-                cursor
-              }}
-              pageInfo {{
-                endCursor
-                hasNextPage
               }}
             }}
-          }}
-        }}
-      }}
-    """.format(
+        """.format(
             org_name=org, repo_name=repo, cve_count=cve_first, cve_cursor=cve_last
         )
         return query

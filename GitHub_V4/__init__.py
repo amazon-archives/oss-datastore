@@ -30,8 +30,8 @@ class GitHub_v4:
     # functions
     def __init__(self, token, db_handle):
         """
-      Contains the graphql query structure for getting CVE information for an org.
-    """
+        Contains the graphql query structure for getting CVE information for an org.
+        """
         # initialize headers
         self.github_v4_cve_headers["Authorization"] = f"token {token}"
         self.github_v4_normal_headers["Authorization"] = f"token {token}"
@@ -54,19 +54,19 @@ class GitHub_v4:
 
     def make_graphql_query(self, query, headers):
         """
-      Makes queries to the graphql API and handles pagination
-    """
+        Makes queries to the graphql API and handles pagination
+        """
         # ensure you have enough tokens before proceeding
         rate_query = """
-      query {
-        rateLimit {
-          limit
-          cost
-          remaining
-          resetAt
-        }
-      }
-    """
+          query {
+            rateLimit {
+              limit
+              cost
+              remaining
+              resetAt
+            }
+          }
+        """
         response = requests.post(
             self.github_v4_url, json={"query": rate_query}, headers=headers
         )
@@ -108,8 +108,8 @@ class GitHub_v4:
 
     def get_cves_for_org(self, org):
         """
-      Get the CVE information for the current org
-    """
+        Get the CVE information for the current org
+        """
         query = self.cve.get_full_org_cve_info_query(org)
         request = self.make_graphql_query(query, self.github_v4_cve_headers)
         repo_page_info = request["data"]["organization"]["repositories"]["pageInfo"]
@@ -155,8 +155,8 @@ class GitHub_v4:
         self, org, repo, cve_page_info={"endCursor": None, "hasNextPage": False}
     ):
         """
-      Get CVEs for a repo and or continue getting them
-    """
+        Get CVEs for a repo and or continue getting them
+        """
         query = self.cve.get_repo_cve_info_query(org, repo)
         request = self.make_graphql_query(query, self.github_v4_cve_headers)
         print(request)
@@ -190,8 +190,8 @@ class GitHub_v4:
 
     def get_org_repo_list(self, org_name):
         """
-      Returns an array of repo data in an org and the id for the v4 API
-    """
+        Returns an array of repo data in an org and the id for the v4 API
+        """
         query = self.repo.get_full_org_repos(org_name)
         request = self.make_graphql_query(query, self.github_v4_normal_headers)
         repo_data = request["data"]["organization"]["repositories"]["edges"]
@@ -208,9 +208,9 @@ class GitHub_v4:
 
     def get_org_all_repo_details(self, org, repo_list):
         """
-      Pull all the data for a repos in an org
-      Writes the timestamped data to an output directory
-    """
+        Pull all the data for a repos in an org
+        Writes the timestamped data to an output directory
+        """
         for repo_desc in repo_list:
             currDate = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
             repo_name = repo_desc["name"]
@@ -222,8 +222,8 @@ class GitHub_v4:
 
     def get_full_repo(self, org, repo):
         """
-      Gets all the information for a specific repo
-    """
+        Gets all the information for a specific repo
+        """
         # TODO: figure out how to request on the new information without using events
         logging.info(f"Requesting base info for {org}/{repo}")
         query = self.repo.get_single_repo_base(
@@ -322,8 +322,8 @@ class GitHub_v4:
 
     def get_user_orgs(self, user):
         """
-      Returns array of orgs that a user has access.
-    """
+        Returns array of orgs that a user has access.
+        """
         query = self.user.get_user_orgs(user)
         request = self.make_graphql_query(query, self.github_v4_normal_headers)
         user_page_info = request["data"]["user"]["organizations"]["pageInfo"]
@@ -338,8 +338,8 @@ class GitHub_v4:
     # pagination fuctions for specific data
     def paginate_assignable_users(self, org, repo, assignable_users):
         """
-      Returns an object of edges and pageInfo of assignable users
-    """
+        Returns an object of edges and pageInfo of assignable users
+        """
         while assignable_users["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org,
@@ -363,8 +363,8 @@ class GitHub_v4:
 
     def paginate_branch_protection_rules(self, org, repo, branch_protection_rules):
         """
-      Returns an object of edges and pageInfo of assignable users
-    """
+        Returns an object of edges and pageInfo of assignable users
+        """
         while branch_protection_rules["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org,
@@ -388,8 +388,8 @@ class GitHub_v4:
 
     def paginate_collaborators(self, org, repo, collaborators):
         """
-      Returns an object of edges and pageInfo of collaborators
-    """
+        Returns an object of edges and pageInfo of collaborators
+        """
         while collaborators["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org,
@@ -413,8 +413,8 @@ class GitHub_v4:
 
     def paginate_issues(self, org, repo, issues):
         """
-      Returns an object of edges and pageInfo of issues
-    """
+        Returns an object of edges and pageInfo of issues
+        """
         while issues["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org, repo, self.repo.part_issues(issues["pageInfo"]["endCursor"])
@@ -432,8 +432,8 @@ class GitHub_v4:
 
     def paginate_labels(self, org, repo, labels):
         """
-      Returns an object of edges and pageInfo of labels
-    """
+        Returns an object of edges and pageInfo of labels
+        """
         while labels["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org,
@@ -453,8 +453,8 @@ class GitHub_v4:
 
     def paginate_languages(self, org, repo, languages):
         """
-      Returns an object of edges and pageInfo of languages
-    """
+        Returns an object of edges and pageInfo of languages
+        """
         while languages["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org, repo, self.repo.part_languages(languages["pageInfo"]["endCursor"])
@@ -472,8 +472,8 @@ class GitHub_v4:
 
     def paginate_milestones(self, org, repo, milestones):
         """
-      Returns an object of edges and pageInfo of milestones
-    """
+        Returns an object of edges and pageInfo of milestones
+        """
         while milestones["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org,
@@ -493,8 +493,8 @@ class GitHub_v4:
 
     def paginate_projects(self, org, repo, projects):
         """
-      Returns an object of edges and pageInfo of projects
-    """
+        Returns an object of edges and pageInfo of projects
+        """
         while projects["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org, repo, self.repo.part_projects(projects["pageInfo"]["endCursor"])
@@ -512,8 +512,8 @@ class GitHub_v4:
 
     def paginate_pull_requests(self, org, repo):
         """
-      Returns an object of edges and pageInfo of pull_requests
-    """
+        Returns an object of edges and pageInfo of pull_requests
+        """
         # TODO: waiting for GitHub info why this fails on their end
         query = self.repo.get_single_repo_base(
             org, repo, self.repo.part_pull_requests()
@@ -539,8 +539,8 @@ class GitHub_v4:
 
     def paginate_releases(self, org, repo, releases):
         """
-      Returns an object of edges and pageInfo of releases
-    """
+        Returns an object of edges and pageInfo of releases
+        """
         while releases["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org, repo, self.repo.part_releases(releases["pageInfo"]["endCursor"])
@@ -558,8 +558,8 @@ class GitHub_v4:
 
     def paginate_repository_topics(self, org, repo, repository_topics):
         """
-      Returns an object of edges and pageInfo of repository_topics
-    """
+        Returns an object of edges and pageInfo of repository_topics
+        """
         while repository_topics["pageInfo"]["hasNextPage"]:
             query = self.repo.get_single_repo_base(
                 org,

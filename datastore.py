@@ -25,7 +25,7 @@ parser.add_argument(
 def get_single_repo_info(ghv4, org_name, repo_name):
     """
     Used for getting a single repos data from the v4 API
-  """
+    """
     return ghv4.get_full_repo(org_name, repo_name)
 
 
@@ -58,9 +58,8 @@ if __name__ == "__main__":
     ghv3 = ghv3_api(token, db)
 
     # get_org_repo_info()
-    ghv3.get_repo_traffic("amzn", "oss-contribution-tracker")
-    json_obj = ghv4.get_cve_for_repo("amzn", "oss-contribution-tracker")
-    with open("cve_example.json", "wt") as f:
-        print(
-            json.dumps(json_obj, indent=2, ensure_ascii=False, sort_keys=True), file=f
-        )
+    # ghv3.get_repo_traffic("amzn", "oss-contribution-tracker")
+    # json_obj = ghv4.get_cve_for_repo("amzn", "oss-contribution-tracker")
+    json_obj = ghv4.get_full_repo("awslabs", "s2n")
+    with open("pr_request.json", "wt") as f:
+        json.dump(json_obj, f, sort_keys=True, indent=2)
