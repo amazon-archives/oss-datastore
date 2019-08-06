@@ -30,15 +30,15 @@ To activate shell:
 
 > `pipenv shell`
 
-To install new runtime dependencies 
+To install new runtime dependencies
 
 > `pipenv install <package name>`
 
-To install new dev dependencies 
+To install new dev dependencies
 
 > `pipenv install <package name> --dev`
 
-Ensure you have filled out the information in Config.py and run
+To run, ensure you have copied sample.env to .env, fill in the config info, and run
 
 > `pipenv run python datastore.py`
 

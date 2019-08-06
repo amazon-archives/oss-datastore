@@ -159,7 +159,6 @@ class GitHub_v4:
         """
         query = self.cve.get_repo_cve_info_query(org, repo)
         request = self.make_graphql_query(query, self.github_v4_cve_headers)
-        print(request)
         cve_page_info = request["data"]["organization"]["repository"][
             "vulnerabilityAlerts"
         ]["pageInfo"]
@@ -206,19 +205,15 @@ class GitHub_v4:
             repo_list.append(repo_info["node"])
         return repo_list
 
-    def get_org_all_repo_details(self, org, repo_list):
+    def get_org_all_repo_details(self, org, repo):
         """
         Pull all the data for a repos in an org
         Writes the timestamped data to an output directory
         """
-        for repo_desc in repo_list:
-            currDate = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-            repo_name = repo_desc["name"]
-            self.write_structured_json(
-                f"{org}-{repo_name}-{currDate}.json",
-                self.get_full_repo(org, repo_desc["name"]),
-                "repo",
-            )
+        currDate = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+        self.write_structured_json(
+            f"{org}-{repo}-{currDate}.json", self.get_full_repo(org, repo), "repo"
+        )
 
     def get_full_repo(self, org, repo):
         """

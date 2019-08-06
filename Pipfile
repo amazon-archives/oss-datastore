@@ -13,6 +13,7 @@ pre-commit = "*"
 requests = "*"
 boto3 = "*"
 pygresql = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.6"

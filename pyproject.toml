@@ -21,7 +21,7 @@ exclude = '''
   | buck-out
   | build
   | dist
-  | Config-dev.json
+  | .env
   | .vscode
   | output
 
