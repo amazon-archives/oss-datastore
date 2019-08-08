@@ -1,6 +1,21 @@
+# Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License").
+# You may not use this file except in compliance with the License.
+# A copy of the License is located at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# or in the "license" file accompanying this file. This file is distributed
+# on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+# express or implied. See the License for the specific language governing
+# permissions and limitations under the License.
+
 import argparse
+import boto3
 import logging
 import os
+import shutil
 from dotenv import load_dotenv
 from pg import DB
 
@@ -20,22 +35,19 @@ parser.add_argument(
 )
 
 
-def get_single_repo_info(ghv4, org_name, repo_name):
-    """
-    Used for getting a single repos data from the v4 API
-    """
-    return ghv4.get_full_repo(org_name, repo_name)
-
-
-def get_org_repo_info():
-    orgs_array = os.getenv("GITHUB_ORGS").split(",")
-    for org in orgs_array:
-        logging.info("Pulling data for {} org.".format(org))
-        ghv4.get_cves_for_org(org)
-        repo_list = ghv4.get_org_repo_list(org)
-        ghv4.get_org_all_repo_details(org, repo_list)
-        ghv3.get_repo_traffic(org, repo_list)
-        logging.info("Data for {} logged.".format(org))
+def upload_files_to_s3(s3):
+    bucket_name = os.getenv("S3_ROOT_BUCKET")
+    bucket = s3.Bucket(bucket_name)
+    upload_path = "output"
+    for subdir, dirs, files in os.walk(upload_path):
+        for file in files:
+            full_path = os.path.join(subdir, file)
+            with open(full_path, "rb") as data:
+                bucket.put_object(Key=full_path[len(upload_path) + 1 :], Body=data)
+            # delete file after upload
+            os.remove(full_path)
+    # delete output folder and remaining directories
+    shutil.rmtree(upload_path)
 
 
 if __name__ == "__main__":
@@ -56,12 +68,17 @@ if __name__ == "__main__":
     ghv3 = ghv3_api(token, db)
 
     for org_name in os.getenv("GITHUB_ORGS").split(","):
-        org_info = ghv4.get_cves_for_org(org_name)
-    # get_org_repo_info()
-    # ghv3.get_repo_traffic("amzn", "oss-contribution-tracker")
+        ghv4.get_cves_for_org(org_name)
+        ghv3.get_org_traffic(org_name)
 
-    # ghv4.get_org_all_repo_details("amzn", ["oss-contribution-tracker"])
-    # json_obj = ghv4.get_cve_for_repo("amzn", "oss-contribution-tracker")
-    # json_obj = ghv4.get_full_repo("awslabs", "s2n")
-    # with open("pr_request.json", "wt") as f:
-    #    json.dump(json_obj, f, sort_keys=True, indent=2)
+    # now upload the json to S3
+    access = os.getenv("AWS_ACCESS")
+    secret = os.getenv("AWS_SECRET")
+    token = os.getenv("AWS_TOKEN")
+    s3 = boto3.resource(
+        "s3",
+        aws_access_key_id=access,
+        aws_secret_access_key=secret,
+        aws_session_token=token,
+    )
+    upload_files_to_s3(s3)
