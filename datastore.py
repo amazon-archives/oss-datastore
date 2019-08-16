@@ -36,6 +36,9 @@ parser.add_argument(
 
 
 def upload_files_to_s3(s3):
+    """
+    Uploads files to S3 while preserving directory structure
+    """
     bucket_name = os.getenv("S3_ROOT_BUCKET")
     bucket = s3.Bucket(bucket_name)
     upload_path = "output"
@@ -54,31 +57,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
     load_dotenv()
 
+    # set logging level
     logging.basicConfig(format="%(levelname)s:%(message)s", level=args.logging)
-    db = DB(
-        dbname=os.getenv("DATABASE_NAME"),
-        host=os.getenv("DATABASE_ENDPOINT"),
-        port=int(os.getenv("DATABASE_PORT")),
-        user=os.getenv("DATABASE_USER"),
-        passwd=os.getenv("DATABASE_PASSWORD"),
-    )
 
     token = args.token if args.token is not None else os.getenv("GITHUB_TOKEN")
-    ghv4 = ghv4_api(token, db)
-    ghv3 = ghv3_api(token, db)
+    ghv4 = ghv4_api(token)
+    ghv3 = ghv3_api(token)
 
     for org_name in os.getenv("GITHUB_ORGS").split(","):
-        ghv4.get_cves_for_org(org_name)
-        ghv3.get_org_traffic(org_name)
+        ghv4.write_data_for_org(org_name)
+        ghv3.write_org_traffic(org_name)
 
     # now upload the json to S3
-    access = os.getenv("AWS_ACCESS")
-    secret = os.getenv("AWS_SECRET")
-    token = os.getenv("AWS_TOKEN")
-    s3 = boto3.resource(
-        "s3",
-        aws_access_key_id=access,
-        aws_secret_access_key=secret,
-        aws_session_token=token,
-    )
+    s3 = boto3.resource("s3")
     upload_files_to_s3(s3)

@@ -42,3 +42,67 @@ class Repo:
             }}
           """
         return query
+
+    def get_repo_info_query(self):
+        query = f"""
+            query($org_name: String!, $repo_name: String!, $first: Int!, $after: String) {{
+              organization(login: $org_name) {{
+                repository(name: $repo_name) {{
+                  forks(first: 100) {{
+                    totalCount
+                  }}
+                  issues(first: 100) {{
+                    totalCount
+                  }}
+                  name
+                  nameWithOwner
+                  pullRequests(first: 100) {{
+                    totalCount
+                  }}
+                  stargazers (first: 100) {{
+                    totalCount
+                  }}
+                  vulnerabilityAlerts (first: $first after: $after) {{
+                    edges {{
+                      node {{
+                        dismissReason
+                        dismissedAt
+                        id
+                        securityVulnerability {{
+                          advisory {{
+                            description
+                            id
+                            publishedAt
+                            severity
+                            summary
+                          }}
+                          firstPatchedVersion {{
+                            identifier
+                          }}
+                          package {{
+                            ecosystem
+                            name
+                          }}
+                          severity
+                          updatedAt
+                          vulnerableVersionRange
+                        }}
+                        vulnerableManifestFilename
+                        vulnerableManifestPath
+                        vulnerableRequirements
+                      }}
+                      cursor
+                    }}
+                    pageInfo {{
+                      endCursor
+                      hasNextPage
+                    }}
+                  }}
+                  watchers (first: 100) {{
+                    totalCount
+                  }}
+                }}
+              }}
+            }}
+        """
+        return query
