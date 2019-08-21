@@ -121,7 +121,8 @@ class GitHub_v4:
             # log critical error
             msg = f"Failed to get list of repos for org {org}."
             logging.critical(msg)
-            return []
+            # raise exception
+            raise
         file_list = []
         for repo_info in repo_list:
             logging.info(f"Getting data for {org}/{repo_info['name']}")

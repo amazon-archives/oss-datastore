@@ -184,7 +184,7 @@ class GitHub_v3:
         except GitHubV3Error as e:
             # log critical error
             logging.critical(e.args)
-            # not going to raise as it should move onto the next repo
+            # not going to raise we need it to move onto the next repo
 
     def get_repo(self, org):
         return self.github_v3_run_query(f"/orgs/{org}/repos")

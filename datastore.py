@@ -65,7 +65,10 @@ if __name__ == "__main__":
     ghv3 = ghv3_api(token)
 
     for org_name in os.getenv("GITHUB_ORGS").split(","):
-        ghv4.write_data_for_org(org_name)
+        try:
+            ghv4.write_data_for_org(org_name)
+        except GitHubV4Error as e:
+            logging.error(e)
         ghv3.write_org_traffic(org_name)
 
     # now upload the json to S3
