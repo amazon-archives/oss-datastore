@@ -1,0 +1,1838 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+<svg width="230.362cm" height="225.516cm" viewBox="-41.951 -89.379 230.362 225.516"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Layer: Background -->
+<g id="Background">
+<!-- UML - Class -->
+<rect x="0.580" y="18.193" width="14.360" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="7.760" y="19.143"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_org</text>
+<rect x="0.580" y="19.593" width="14.360" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="0.730" y="20.293"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="0.730" y="21.093"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="0.730" y="21.893"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_org_hash_key: string = not null</text>
+<text x="0.730" y="22.693"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="0.580" y="22.993" width="14.360" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="40.090" y="29.814" width="16.670" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="48.425" y="30.764"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_org_repo</text>
+<rect x="40.090" y="31.214" width="16.670" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="40.240" y="31.914"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="40.240" y="32.714"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="40.240" y="33.514"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_org_repo_hash_key: string = not null</text>
+<text x="40.240" y="34.314"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_org_hash_key: string = not null</text>
+<text x="40.240" y="35.114"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<rect x="40.090" y="35.414" width="16.670" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="60.852" y="20.348" width="14.745" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="68.224" y="21.298"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_repo</text>
+<rect x="60.852" y="21.748" width="14.745" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="61.002" y="22.448"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="61.002" y="23.248"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="61.002" y="24.048"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_repo_hash_key: string = not null</text>
+<text x="61.002" y="24.848"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="60.852" y="25.148" width="14.745" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="38.831,34.114 38.676,34.114 38.676,21.693 14.940,21.693 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="40.090,34.114 39.390,34.354 38.690,34.114 39.390,33.874 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="58.018,34.914 58.975,34.914 58.975,23.848 60.852,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="56.760,34.914 57.460,34.674 58.160,34.914 57.460,35.154 "/>
+<!-- UML - Class -->
+<rect x="42.642" y="-15.618" width="11.665" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="48.475" y="-14.668"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_user</text>
+<rect x="42.642" y="-14.218" width="11.665" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="42.792" y="-13.518"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="42.792" y="-12.718"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="42.792" y="-11.918"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_user_hash_key: string</text>
+<text x="42.792" y="-11.118"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="42.642" y="-10.818" width="11.665" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="-8.158" y="-7.251" width="16.670" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="0.177" y="-6.301"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_org_user</text>
+<rect x="-8.158" y="-5.851" width="16.670" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-8.008" y="-5.151"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="-8.008" y="-4.351"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="-8.008" y="-3.551"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_org_user_hash_key: string = not null</text>
+<text x="-8.008" y="-2.751"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_org_hash_key: string = not null</text>
+<text x="-8.008" y="-1.951"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_user_hash_key: string = not null</text>
+<rect x="-8.158" y="-1.651" width="16.670" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="40.722" y="-8.925" width="17.055" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="49.249" y="-7.975"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_user</text>
+<rect x="40.722" y="-7.525" width="17.055" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="40.872" y="-6.825"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="40.872" y="-6.025"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="40.872" y="-5.225"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_user_hash_key: string = not null</text>
+<text x="40.872" y="-4.425"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_user_hash_key: string = not null</text>
+<text x="40.872" y="-3.625"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<rect x="40.722" y="-3.325" width="17.055" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-9.416,-2.951 -10.290,-2.951 -10.290,21.693 0.580,21.693 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-8.158,-2.951 -8.858,-2.711 -9.558,-2.951 -8.858,-3.191 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="39.463,-3.825 39.794,-3.825 39.794,23.848 60.852,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="40.722,-3.825 40.022,-3.585 39.322,-3.825 40.022,-4.065 "/>
+<!-- UML - Class -->
+<rect x="13.595" y="-34.476" width="17.055" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="22.122" y="-33.526"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_user</text>
+<rect x="13.595" y="-33.076" width="17.055" height="17.800" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="13.745" y="-32.376"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="13.745" y="-31.576"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_user_hash_key: string = not null</text>
+<text x="13.745" y="-30.776"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="13.745" y="-29.976"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="13.745" y="-29.176"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++login: string = not null</text>
+<text x="13.745" y="-28.376"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string</text>
+<text x="13.745" y="-27.576"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++company: string</text>
+<text x="13.745" y="-26.776"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++blog: string</text>
+<text x="13.745" y="-25.976"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++location: string</text>
+<text x="13.745" y="-25.176"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++bio: string</text>
+<text x="13.745" y="-24.376"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++public_repos_count: uint = not null</text>
+<text x="13.745" y="-23.576"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++public_gists_count: uint = not null</text>
+<text x="13.745" y="-22.776"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++followers_count: uint = not null</text>
+<text x="13.745" y="-21.976"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++following_count: uint = not null</text>
+<text x="13.745" y="-21.176"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="13.745" y="-20.376"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++private_gists_count: uint = not null</text>
+<text x="13.745" y="-19.576"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++total_private_repos_count: uint = not null</text>
+<text x="13.745" y="-18.776"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++owner_private_repos: uint = not null</text>
+<text x="13.745" y="-17.976"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++disk_usage: uint = not null</text>
+<text x="13.745" y="-17.176"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++collaborators: uint = not null</text>
+<text x="13.745" y="-16.376"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++2fa_enabled: bool = not null</text>
+<text x="13.745" y="-15.576"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++plan: jsonb</text>
+<rect x="13.595" y="-15.276" width="17.055" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="31.908,-31.776 38.482,-31.776 38.482,-12.118 42.642,-12.118 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="30.650,-31.776 31.350,-32.016 32.050,-31.776 31.350,-31.536 "/>
+<!-- UML - Class -->
+<rect x="18.125" y="-8.517" width="16.670" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="26.460" y="-7.567"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_org</text>
+<rect x="18.125" y="-7.117" width="16.670" height="21.800" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="18.275" y="-6.417"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="18.275" y="-5.617"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_repo_hash_key: string = not null</text>
+<text x="18.275" y="-4.817"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="18.275" y="-4.017"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="18.275" y="-3.217"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++login: string = not null</text>
+<text x="18.275" y="-2.417"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="18.275" y="-1.617"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++company: string</text>
+<text x="18.275" y="-0.817"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++description: string</text>
+<text x="18.275" y="-0.017"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++blog: string</text>
+<text x="18.275" y="0.783"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++location: string</text>
+<text x="18.275" y="1.583"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++public_repo_count: uint = not null</text>
+<text x="18.275" y="2.383"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++public_gists: uint = not null</text>
+<text x="18.275" y="3.183"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gist_count: uint = not null</text>
+<text x="18.275" y="3.983"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++followers_count: uint = not null</text>
+<text x="18.275" y="4.783"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++following_count: uint = not null</text>
+<text x="18.275" y="5.583"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="18.275" y="6.383"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++total_private_repo_count: uint = not null</text>
+<text x="18.275" y="7.183"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++owner_private_repo_count: uint = not null</text>
+<text x="18.275" y="7.983"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++private_gists_count: uint = not null</text>
+<text x="18.275" y="8.783"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++disk_usage: uint = not null</text>
+<text x="18.275" y="9.583"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++collaborator_count: uint = not null</text>
+<text x="18.275" y="10.383"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++billing_email: string = not null</text>
+<text x="18.275" y="11.183"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++plan_info: string = not null</text>
+<text x="18.275" y="11.983"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++default_repo_perms: string = not null</text>
+<text x="18.275" y="12.783"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++members_can_create_repos: bool = not null</text>
+<text x="18.275" y="13.583"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++2fa_enabled: bool = not null</text>
+<text x="18.275" y="14.383"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++email: string</text>
+<rect x="18.125" y="14.683" width="16.670" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="99.328" y="-37.452" width="14.745" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="106.701" y="-36.502"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_repo</text>
+<rect x="99.328" y="-36.052" width="14.745" height="24.200" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="99.478" y="-35.352"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="99.478" y="-34.552"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_repo_hash_key: string = not null</text>
+<text x="99.478" y="-33.752"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="99.478" y="-32.952"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="99.478" y="-32.152"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="99.478" y="-31.352"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++full_name: string = not null</text>
+<text x="99.478" y="-30.552"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++description: string</text>
+<text x="99.478" y="-29.752"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++fork: bool = not null</text>
+<text x="99.478" y="-28.952"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++url: string = not null</text>
+<text x="99.478" y="-28.152"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="99.478" y="-27.352"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++homepage: string</text>
+<text x="99.478" y="-26.552"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++size: uint = not null</text>
+<text x="99.478" y="-25.752"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++stargazers_count: uint = not null</text>
+<text x="99.478" y="-24.952"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++watchers_count: uint = not null</text>
+<text x="99.478" y="-24.152"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++language: string</text>
+<text x="99.478" y="-23.352"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++has_issues: bool = not null</text>
+<text x="99.478" y="-22.552"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++has_projects: bool = not null</text>
+<text x="99.478" y="-21.752"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++has_downloads: bool = not null</text>
+<text x="99.478" y="-20.952"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++has_wiki: bool = not null</text>
+<text x="99.478" y="-20.152"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++has_pages: bool = not null</text>
+<text x="99.478" y="-19.352"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++forks_count: uint = not null</text>
+<text x="99.478" y="-18.552"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++archived: bool = not null</text>
+<text x="99.478" y="-17.752"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++open_issue_count: uint = not null</text>
+<text x="99.478" y="-16.952"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++watchers_count: uint = not null</text>
+<text x="99.478" y="-16.152"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++default_branch: string = not null</text>
+<text x="99.478" y="-15.352"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++permissions: jsonb = not null</text>
+<text x="99.478" y="-14.552"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++allow_squash_merge: bool = true</text>
+<text x="99.478" y="-13.752"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++allow_merge_commit: bool = not null</text>
+<text x="99.478" y="-12.952"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++network_count: uint = not null</text>
+<text x="99.478" y="-12.152"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++subscribers_count: uint = not null</text>
+<rect x="99.328" y="-11.852" width="14.745" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="16.867,-5.817 17.088,-5.817 17.088,21.693 14.940,21.693 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="18.125,-5.817 17.425,-5.577 16.725,-5.817 17.425,-6.057 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="98.069,-34.752 91.412,-34.752 91.412,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="99.328,-34.752 98.628,-34.512 97.928,-34.752 98.628,-34.992 "/>
+<!-- UML - Class -->
+<rect x="13.891" y="61.651" width="14.745" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="21.264" y="62.601"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_team</text>
+<rect x="13.891" y="63.051" width="14.745" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="14.041" y="63.751"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="14.041" y="64.551"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="14.041" y="65.351"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_team_hash_key: string = not null</text>
+<text x="14.041" y="66.151"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="13.891" y="66.451" width="14.745" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="89.194" y="88.129" width="15.130" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="96.759" y="89.079"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_issue</text>
+<rect x="89.194" y="89.529" width="15.130" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="89.344" y="90.229"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="89.344" y="91.029"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="89.344" y="91.829"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_issue_hash_key: string = not null</text>
+<text x="89.344" y="92.629"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="89.194" y="92.929" width="15.130" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="114.038" y="104.735" width="17.825" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="122.950" y="105.685"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_pull_request</text>
+<rect x="114.038" y="106.135" width="17.825" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="114.188" y="106.835"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="114.188" y="107.635"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="114.188" y="108.435"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_pull_request_hash_key: string = not null</text>
+<text x="114.188" y="109.235"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="114.038" y="109.535" width="17.825" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="87.401" y="109.634" width="15.515" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="95.159" y="110.584"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_commit</text>
+<rect x="87.401" y="111.034" width="15.515" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="87.551" y="111.734"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="87.551" y="112.534"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="87.551" y="113.334"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_commit_hash_key: string = not null</text>
+<text x="87.551" y="114.134"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="87.401" y="114.434" width="15.515" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="22.757" y="45.067" width="16.670" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="31.092" y="46.017"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_org_team</text>
+<rect x="22.757" y="46.467" width="16.670" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="22.907" y="47.167"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="22.907" y="47.967"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="22.907" y="48.767"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_org_team_hash_key: string = not null</text>
+<text x="22.907" y="49.567"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_org_hash_key: string = not null</text>
+<text x="22.907" y="50.367"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_team_hash_key: string = not null</text>
+<rect x="22.757" y="50.667" width="16.670" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="21.498,50.167 11.594,50.167 11.594,65.151 13.891,65.151 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="22.757,50.167 22.057,50.407 21.357,50.167 22.057,49.927 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="21.498,49.367 18.498,49.367 18.498,21.693 14.940,21.693 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="22.757,49.367 22.057,49.607 21.357,49.367 22.057,49.127 "/>
+<!-- UML - Class -->
+<rect x="61.213" y="96.393" width="17.055" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="69.740" y="97.343"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_team</text>
+<rect x="61.213" y="97.793" width="17.055" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="61.363" y="98.493"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="61.363" y="99.293"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="61.363" y="100.093"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_team_hash_key: string = not null</text>
+<text x="61.363" y="100.893"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="61.363" y="101.693"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_team_hash_key: string = not null</text>
+<rect x="61.213" y="101.993" width="17.055" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="59.954,101.493 33.543,101.493 33.543,65.151 28.636,65.151 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="61.213,101.493 60.513,101.733 59.813,101.493 60.513,101.253 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="79.527,100.693 78.838,100.693 78.838,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="78.268,100.693 78.968,100.453 79.668,100.693 78.968,100.933 "/>
+<!-- UML - Class -->
+<rect x="12.916" y="78.300" width="15.900" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="20.866" y="79.250"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_license</text>
+<rect x="12.916" y="79.700" width="15.900" height="2.600" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="13.066" y="80.400"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="13.066" y="81.200"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="13.066" y="82.000"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_license_hash_key: string = not null</text>
+<rect x="12.916" y="82.300" width="15.900" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="43.497" y="58.864" width="14.745" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="50.870" y="59.814"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_team</text>
+<rect x="43.497" y="60.264" width="14.745" height="9.000" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="43.647" y="60.964"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="43.647" y="61.764"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_team_hash_key: string = not null</text>
+<text x="43.647" y="62.564"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="43.647" y="63.364"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="43.647" y="64.164"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="43.647" y="64.964"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++slug: string = not null</text>
+<text x="43.647" y="65.764"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++description: string</text>
+<text x="43.647" y="66.564"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++privacy: string = not null</text>
+<text x="43.647" y="67.364"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="43.647" y="68.164"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++members_count: uint = not null</text>
+<text x="43.647" y="68.964"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++repos_count: uint = not null</text>
+<rect x="43.497" y="69.264" width="14.745" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="52.057,41.667 53.037,41.667 53.037,53.391 60.434,53.391 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="50.799,41.667 51.499,41.427 52.199,41.667 51.499,41.907 "/>
+<!-- UML - Class -->
+<rect x="42.837" y="-25.319" width="14.745" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="50.210" y="-24.369"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_user_internal</text>
+<rect x="42.837" y="-23.919" width="14.745" height="4.200" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="42.987" y="-23.219"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="42.987" y="-22.419"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_user_hash_key: string = not null</text>
+<text x="42.987" y="-21.619"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="42.987" y="-20.819"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="42.987" y="-20.019"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++company_email: string = not null</text>
+<rect x="42.837" y="-19.719" width="14.745" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="42.523" y="-35.650" width="15.900" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="50.473" y="-34.700"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_user_external</text>
+<rect x="42.523" y="-34.250" width="15.900" height="4.200" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="42.673" y="-33.550"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="42.673" y="-32.750"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_user_hash_key: string = not null</text>
+<text x="42.673" y="-31.950"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="42.673" y="-31.150"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="42.673" y="-30.350"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++company_representing: string = not null</text>
+<rect x="42.523" y="-30.050" width="15.900" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="57.980,-21.425 59.332,-17.368 59.332,-17.368 54.307,-12.118 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="57.582,-22.619 58.032,-22.031 58.025,-21.291 57.576,-21.879 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="59.682,-31.350 62.515,-31.350 62.515,-12.118 54.307,-12.118 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="58.423,-31.350 59.123,-31.590 59.823,-31.350 59.123,-31.110 "/>
+<!-- UML - Class -->
+<rect x="87.707" y="64.557" width="17.055" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="96.235" y="65.507"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_issue</text>
+<rect x="87.707" y="65.957" width="17.055" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="87.857" y="66.657"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="87.857" y="67.457"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="87.857" y="68.257"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_user_hash_key: string = not null</text>
+<text x="87.857" y="69.057"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="87.857" y="69.857"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_issue_hash_key: string = not null</text>
+<rect x="87.707" y="70.157" width="17.055" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="86.449,68.857 85.642,68.857 85.642,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="87.707,68.857 87.007,69.097 86.307,68.857 87.007,68.617 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="104.960,70.900 106.512,80.643 106.512,80.643 104.324,91.629 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="104.762,69.657 105.110,70.310 104.983,71.039 104.636,70.386 "/>
+<!-- UML - Class -->
+<rect x="88.587" y="71.475" width="15.130" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="96.151" y="72.425"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_issue</text>
+<rect x="88.587" y="72.875" width="15.130" height="12.200" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="88.737" y="73.575"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="88.737" y="74.375"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_issue_hash_key: string = not null</text>
+<text x="88.737" y="75.175"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="88.737" y="75.975"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="88.737" y="76.775"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++issue_number: uint = not null</text>
+<text x="88.737" y="77.575"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++title: string = not null</text>
+<text x="88.737" y="78.375"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++requesting_user: jsonb = not null</text>
+<text x="88.737" y="79.175"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++state: string = not null</text>
+<text x="88.737" y="79.975"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++locked: bool = not null</text>
+<text x="88.737" y="80.775"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++assignee: jsonb</text>
+<text x="88.737" y="81.575"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++milestone: jsonb</text>
+<text x="88.737" y="82.375"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++comments_count: uint = not null</text>
+<text x="88.737" y="83.175"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="88.737" y="83.975"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++closed_at: string = not null</text>
+<text x="88.737" y="84.775"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++issue_body: string</text>
+<rect x="88.587" y="85.075" width="15.130" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="88.339,75.409 86.837,82.902 86.837,82.902 89.194,91.629 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="88.587,74.175 88.684,74.909 88.311,75.548 88.214,74.814 "/>
+<!-- UML - Class -->
+<rect x="112.583" y="80.749" width="20.520" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="122.843" y="81.699"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_issue_pull_request</text>
+<rect x="112.583" y="82.149" width="20.520" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="112.733" y="82.849"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="112.733" y="83.649"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="112.733" y="84.449"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_issue_pull_request_hash_key: string = not null</text>
+<text x="112.733" y="85.249"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_issue_hash_key: string = not null</text>
+<text x="112.733" y="86.049"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_pull_request_hash_key: string = not null</text>
+<rect x="112.583" y="86.349" width="20.520" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="111.324,85.049 110.270,85.049 110.270,91.629 104.324,91.629 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="112.583,85.049 111.883,85.289 111.183,85.049 111.883,84.809 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="134.362,85.849 134.451,85.849 134.451,108.235 131.863,108.235 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="133.103,85.849 133.803,85.609 134.503,85.849 133.803,86.089 "/>
+<!-- UML - Class -->
+<rect x="160.165" y="114.472" width="20.520" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="170.425" y="115.422"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_pull_request_label</text>
+<rect x="160.165" y="115.872" width="20.520" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="160.315" y="116.572"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="160.315" y="117.372"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="160.315" y="118.172"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_pull_request_label_hash_key: string = not null</text>
+<text x="160.315" y="118.972"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_pull_request_hash_key: string = not null</text>
+<text x="160.315" y="119.772"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_label_hash_key: string = not null</text>
+<rect x="160.165" y="120.072" width="20.520" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="169.607" y="99.534" width="15.130" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="177.172" y="100.484"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_labels</text>
+<rect x="169.607" y="100.934" width="15.130" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="169.757" y="101.634"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="169.757" y="102.434"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="169.757" y="103.234"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_label_hash_key: string = not null</text>
+<text x="169.757" y="104.034"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="169.607" y="104.335" width="15.130" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="181.944,118.772 182.409,118.772 182.409,108.235 131.863,108.235 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="180.685,118.772 181.385,118.532 182.085,118.772 181.385,119.012 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="181.944,119.572 186.098,119.572 186.098,103.035 184.737,103.035 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="180.685,119.572 181.385,119.332 182.085,119.572 181.385,119.812 "/>
+<!-- UML - Class -->
+<rect x="126.775" y="119.288" width="20.520" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="137.035" y="120.238"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_issue_label</text>
+<rect x="126.775" y="120.688" width="20.520" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="126.925" y="121.388"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="126.925" y="122.188"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="126.925" y="122.988"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_issue_pull_request_hash_key: string = not null</text>
+<text x="126.925" y="123.788"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_issue_hash_key: string = not null</text>
+<text x="126.925" y="124.588"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_label_hash_key: string = not null</text>
+<rect x="126.775" y="124.888" width="20.520" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="125.516,123.588 111.500,123.588 111.500,91.629 104.324,91.629 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="126.775,123.588 126.075,123.828 125.375,123.588 126.075,123.348 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="148.554,124.388 188.311,124.388 188.311,103.035 184.737,103.035 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="147.295,124.388 147.995,124.148 148.695,124.388 147.995,124.628 "/>
+<!-- UML - Class -->
+<rect x="146.621" y="66.317" width="17.440" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="155.341" y="67.267"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_label</text>
+<rect x="146.621" y="67.717" width="17.440" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="146.771" y="68.417"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="146.771" y="69.217"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="146.771" y="70.017"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_label_hash_key: string = not null</text>
+<text x="146.771" y="70.817"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="146.771" y="71.617"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_labels_hash_key: string = not null</text>
+<rect x="146.621" y="71.917" width="17.440" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="145.362,70.617 145.107,70.617 145.107,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="146.621,70.617 145.921,70.857 145.221,70.617 145.921,70.377 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="165.320,71.417 166.501,71.417 166.501,103.035 169.607,103.035 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="164.061,71.417 164.761,71.177 165.461,71.417 164.761,71.657 "/>
+<!-- UML - Class -->
+<rect x="117.183" y="55.845" width="20.135" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="127.251" y="56.795"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_pull_request</text>
+<rect x="117.183" y="57.245" width="20.135" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="117.333" y="57.945"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="117.333" y="58.745"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="117.333" y="59.545"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_pull_request_hash_key: string = not null</text>
+<text x="117.333" y="60.345"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="117.333" y="61.145"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_pull_request_hash_key: string = not null</text>
+<rect x="117.183" y="61.445" width="20.135" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="138.577,60.145 139.287,60.145 139.287,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="137.318,60.145 138.018,59.905 138.718,60.145 138.018,60.385 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="138.577,60.945 139.205,60.945 139.205,108.235 131.863,108.235 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="137.318,60.945 138.018,60.705 138.718,60.945 138.018,61.185 "/>
+<!-- UML - Class -->
+<rect x="143.718" y="76.070" width="17.825" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="152.630" y="77.020"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_pull_request</text>
+<rect x="143.718" y="77.470" width="17.825" height="28.200" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="143.868" y="78.170"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="143.868" y="78.970"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_pull_request_hash_key: string = not null</text>
+<text x="143.868" y="79.770"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="143.868" y="80.570"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="143.868" y="81.370"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++number: uint = not null</text>
+<text x="143.868" y="82.170"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++locked: bool = not null</text>
+<text x="143.868" y="82.970"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++title: string = not null</text>
+<text x="143.868" y="83.770"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++submiting_user_login: jsonb = not null</text>
+<text x="143.868" y="84.570"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++body: string = not null</text>
+<text x="143.868" y="85.370"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="143.868" y="86.170"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++closed_at: string</text>
+<text x="143.868" y="86.970"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++merged_at: string</text>
+<text x="143.868" y="87.770"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++merge_commit_sha: string</text>
+<text x="143.868" y="88.570"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++assignee_name: string</text>
+<text x="143.868" y="89.370"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++assignees: jsonb</text>
+<text x="143.868" y="90.170"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++requested_reviewers: jsonb</text>
+<text x="143.868" y="90.970"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++requested_teams: jsonb</text>
+<text x="143.868" y="91.770"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++milestone_id: uint</text>
+<text x="143.868" y="92.570"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++merged: bool = not null</text>
+<text x="143.868" y="93.370"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++mergable: bool</text>
+<text x="143.868" y="94.170"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rebaseable: bool</text>
+<text x="143.868" y="94.970"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++merged_status: string = not null</text>
+<text x="143.868" y="95.770"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++merged_by_name: string</text>
+<text x="143.868" y="96.570"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++comments_count: uint = not null</text>
+<text x="143.868" y="97.370"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++review_comments_count: uint = not null</text>
+<text x="143.868" y="98.170"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++maintainer_can_modify: bool = not null</text>
+<text x="143.868" y="98.970"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++commits_count: uint = not null</text>
+<text x="143.868" y="99.770"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++additions_count: uint = not null</text>
+<text x="143.868" y="100.570"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++deletions_count: uint = not null</text>
+<text x="143.868" y="101.370"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++changes_count: uint = not null</text>
+<text x="143.868" y="102.170"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++changed_files_count: uint = not null</text>
+<text x="143.868" y="102.970"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++state: string = not null</text>
+<text x="143.868" y="103.770"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++submitting_user_id: uint = not null</text>
+<text x="143.868" y="104.570"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++assignee_id: uint</text>
+<text x="143.868" y="105.370"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++merged_by_id: uint</text>
+<rect x="143.718" y="105.670" width="17.825" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="142.459,78.770 141.343,78.770 141.343,108.235 131.863,108.235 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="143.718,78.770 143.018,79.010 142.318,78.770 143.018,78.530 "/>
+<!-- UML - Class -->
+<rect x="170.446" y="88.177" width="15.130" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="178.011" y="89.127"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_label</text>
+<rect x="170.446" y="89.577" width="15.130" height="7.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="170.596" y="90.277"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="170.596" y="91.077"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_label_hash_key: string = not null</text>
+<text x="170.596" y="91.877"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="170.596" y="92.677"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="170.596" y="93.477"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++url: string = not null</text>
+<text x="170.596" y="94.277"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="170.596" y="95.077"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++description: string = not null</text>
+<text x="170.596" y="95.877"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++color: string = not null</text>
+<text x="170.596" y="96.677"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++default: bool = not null</text>
+<rect x="170.446" y="96.977" width="15.130" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="170.073,92.079 168.557,96.956 168.557,96.956 169.607,103.034 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="170.446,90.877 170.467,91.616 170.031,92.214 170.009,91.474 "/>
+<!-- UML - Class -->
+<rect x="85.885" y="96.939" width="17.825" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="94.797" y="97.889"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_commit</text>
+<rect x="85.885" y="98.339" width="17.825" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="86.035" y="99.039"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="86.035" y="99.839"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="86.035" y="100.639"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_commit_hash_key: string = not null</text>
+<text x="86.035" y="101.439"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="86.035" y="102.239"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_commit_hash_key: string = not null</text>
+<rect x="85.885" y="102.539" width="17.825" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="84.626,101.239 84.101,101.239 84.101,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="85.885,101.239 85.184,101.479 84.484,101.239 85.184,100.999 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="104.088,103.240 105.460,107.587 105.460,107.587 102.916,113.134 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="103.710,102.039 104.149,102.635 104.131,103.374 103.691,102.779 "/>
+<!-- UML - Class -->
+<rect x="87.114" y="118.059" width="15.900" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="95.064" y="119.009"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_commit</text>
+<rect x="87.114" y="119.459" width="15.900" height="10.600" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="87.264" y="120.159"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="87.264" y="120.959"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_commit_hash_key: string = not null</text>
+<text x="87.264" y="121.759"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="87.264" y="122.559"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="87.264" y="123.359"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++author_name: string = not null</text>
+<text x="87.264" y="124.159"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++author_id: uint = not null</text>
+<text x="87.264" y="124.959"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++author_email: string = not null</text>
+<text x="87.264" y="125.759"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++author_commit_date: string = not null</text>
+<text x="87.264" y="126.559"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++commiter_name: string = not null</text>
+<text x="87.264" y="127.359"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++commiter_email: string = not null</text>
+<text x="87.264" y="128.159"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++commiter_commit_date: string = not null</text>
+<text x="87.264" y="128.959"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++message: string</text>
+<text x="87.264" y="129.759"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++comment_count: uint = not null</text>
+<rect x="87.114" y="130.059" width="15.900" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="86.589,119.615 85.364,116.947 85.364,116.947 87.401,113.134 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="87.114,120.759 86.604,120.223 86.530,119.487 87.041,120.023 "/>
+<!-- UML - Class -->
+<rect x="59.795" y="106.189" width="18.210" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="68.900" y="107.139"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_license</text>
+<rect x="59.795" y="107.589" width="18.210" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="59.945" y="108.289"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="59.945" y="109.089"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="59.945" y="109.889"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_license_hash_key: string = not null</text>
+<text x="59.945" y="110.689"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="59.945" y="111.489"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_license_hash_key: string = not null</text>
+<rect x="59.795" y="111.789" width="18.210" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="79.264,110.489 80.787,110.489 80.787,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="78.005,110.489 78.705,110.249 79.405,110.489 78.705,110.729 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="58.537,111.289 32.534,111.289 32.534,81.800 28.816,81.800 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="59.795,111.289 59.095,111.529 58.395,111.289 59.095,111.049 "/>
+<!-- UML - Class -->
+<rect x="13.925" y="68.375" width="15.900" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="21.875" y="69.325"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_license</text>
+<rect x="13.925" y="69.775" width="15.900" height="5.000" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="14.075" y="70.475"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="14.075" y="71.275"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_license_hash_key: string = not null</text>
+<text x="14.075" y="72.075"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="14.075" y="72.875"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="14.075" y="73.675"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="14.075" y="74.475"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++spdx_id: string</text>
+<rect x="13.925" y="74.775" width="15.900" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="30.215,72.272 31.575,76.438 31.575,76.438 28.816,81.800 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="29.825,71.075 30.270,71.666 30.259,72.406 29.814,71.815 "/>
+<!-- UML - Class -->
+<rect x="-29.853" y="91.312" width="19.750" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-19.978" y="92.262"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_team_permissions</text>
+<rect x="-29.853" y="92.712" width="19.750" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-29.703" y="93.412"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="-29.703" y="94.212"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="-29.703" y="95.012"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_team_permissions_hash_key: string = not null</text>
+<text x="-29.703" y="95.812"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_team_hash_key: string = not null</text>
+<text x="-29.703" y="96.612"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_permissions_hash_key: string = not null</text>
+<rect x="-29.853" y="96.912" width="19.750" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="-29.837" y="66.246" width="17.440" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="-21.117" y="67.196"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_permissions</text>
+<rect x="-29.837" y="67.646" width="17.440" height="2.600" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="-29.687" y="68.346"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="-29.687" y="69.146"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="-29.687" y="69.946"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_permissions_hash_key: string = not null</text>
+<rect x="-29.837" y="70.246" width="17.440" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-30.017,95.164 -31.603,83.079 -31.603,83.079 -29.837,69.746 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-29.853,96.412 -30.182,95.749 -30.035,95.024 -29.706,95.687 "/>
+<!-- UML - Class -->
+<rect x="-36.886" y="53.984" width="17.440" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="-28.166" y="54.934"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_permissions</text>
+<rect x="-36.886" y="55.384" width="17.440" height="3.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="-36.736" y="56.084"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="-36.736" y="56.884"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_permissions_hash_key: string = not null</text>
+<text x="-36.736" y="57.684"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="-36.736" y="58.484"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<rect x="-36.886" y="58.784" width="17.440" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-37.212,57.899 -38.636,63.215 -38.636,63.215 -29.837,69.746 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-36.886,56.684 -36.836,57.422 -37.249,58.036 -37.299,57.298 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-8.845,95.612 10.000,95.612 10.000,65.151 13.891,65.151 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-10.103,95.612 -9.403,95.372 -8.703,95.612 -9.403,95.852 "/>
+<!-- UML - Class -->
+<rect x="-36.065" y="33.563" width="17.055" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-27.538" y="34.513"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_team_user</text>
+<rect x="-36.065" y="34.963" width="17.055" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-35.915" y="35.663"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="-35.915" y="36.463"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="-35.915" y="37.263"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_team_user_hash_key: string = not null</text>
+<text x="-35.915" y="38.063"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_team_hash_key: string = not null</text>
+<text x="-35.915" y="38.863"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_user_hash_key: string = not null</text>
+<rect x="-36.065" y="39.163" width="17.055" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-17.752,37.863 10.705,37.863 10.705,65.151 13.891,65.151 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-19.010,37.863 -18.310,37.623 -17.610,37.863 -18.310,38.103 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-36.108,37.405 -37.815,-12.072 -37.815,-12.072 42.642,-12.118 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-36.065,38.663 -36.329,37.971 -36.113,37.264 -35.849,37.955 "/>
+<!-- UML - Class -->
+<rect x="-40.131" y="41.804" width="19.750" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-30.256" y="42.754"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_user_permissions</text>
+<rect x="-40.131" y="43.204" width="19.750" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-39.981" y="43.904"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="-39.981" y="44.704"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="-39.981" y="45.504"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_user_permissions_hash_key: string = not null</text>
+<text x="-39.981" y="46.304"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_user_hash_key: string = not null</text>
+<text x="-39.981" y="47.104"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_permissions_hash_key: string = not null</text>
+<rect x="-40.131" y="47.404" width="19.750" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-40.321,48.148 -41.881,58.325 -41.881,58.325 -29.837,69.746 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-40.131,46.904 -39.999,47.632 -40.343,48.288 -40.474,47.560 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-40.168,44.846 -41.881,-12.064 -41.881,-12.064 42.642,-12.118 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-40.131,46.104 -40.392,45.412 -40.173,44.705 -39.912,45.397 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="9.771,-2.151 11.924,-2.151 11.924,-12.118 42.642,-12.118 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="8.512,-2.151 9.212,-2.391 9.912,-2.151 9.212,-1.911 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="39.463,-4.625 37.007,-4.625 37.007,-12.118 42.642,-12.118 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="40.722,-4.625 40.022,-4.385 39.322,-4.625 40.022,-4.865 "/>
+<!-- UML - Class -->
+<rect x="120.192" y="37.660" width="17.055" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="128.719" y="38.610"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_milestones</text>
+<rect x="120.192" y="39.060" width="17.055" height="13.000" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="120.342" y="39.760"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="120.342" y="40.560"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_milestones_hash_key: string = not null</text>
+<text x="120.342" y="41.360"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="120.342" y="42.160"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="120.342" y="42.960"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++url: string = not null</text>
+<text x="120.342" y="43.760"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++number: uint = not null</text>
+<text x="120.342" y="44.560"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++state: string = not null</text>
+<text x="120.342" y="45.360"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++title: string = not null</text>
+<text x="120.342" y="46.160"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++description: string = not null</text>
+<text x="120.342" y="46.960"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++creator_name: string = not null</text>
+<text x="120.342" y="47.760"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++creator_id: uint = not null</text>
+<text x="120.342" y="48.560"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++open_issues: uint = not null</text>
+<text x="120.342" y="49.360"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++closed_issues: uint = not null</text>
+<text x="120.342" y="50.160"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="120.342" y="50.960"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++closed_at: string</text>
+<text x="120.342" y="51.760"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++due_on: string = not null</text>
+<rect x="120.192" y="52.060" width="17.055" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="122.104" y="12.743" width="14.745" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="129.476" y="13.693"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_repo_traffic_referrers</text>
+<rect x="122.104" y="14.143" width="14.745" height="5.800" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="122.254" y="14.843"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="122.254" y="15.643"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_repo_hash_key: string = not null</text>
+<text x="122.254" y="16.443"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="122.254" y="17.243"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="122.254" y="18.043"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++refferer: string = not  null</text>
+<text x="122.254" y="18.843"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++count: uint = not null</text>
+<text x="122.254" y="19.643"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++uniques: uint = not null</text>
+<rect x="122.104" y="19.943" width="14.745" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="120.845,15.443 117.608,15.443 117.608,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="122.104,15.443 121.404,15.683 120.704,15.443 121.404,15.203 "/>
+<!-- UML - Class -->
+<rect x="98.466" y="-10.555" width="14.745" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="105.839" y="-9.605"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_repo_traffic_paths</text>
+<rect x="98.466" y="-9.155" width="14.745" height="6.600" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="98.616" y="-8.455"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="98.616" y="-7.655"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_repo_hash_key: string = not null</text>
+<text x="98.616" y="-6.855"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="98.616" y="-6.055"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="98.616" y="-5.255"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++path: string = not null</text>
+<text x="98.616" y="-4.455"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++title: string = not null</text>
+<text x="98.616" y="-3.655"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++count: uint = not null</text>
+<text x="98.616" y="-2.855"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++uniques: uint = not null</text>
+<rect x="98.466" y="-2.555" width="14.745" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="97.208,-7.855 93.265,-7.855 93.265,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="98.466,-7.855 97.766,-7.615 97.066,-7.855 97.766,-8.095 "/>
+<!-- UML - Class -->
+<rect x="98.419" y="-0.679" width="14.745" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="105.792" y="0.271"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_repo_traffic_views</text>
+<rect x="98.419" y="0.721" width="14.745" height="5.800" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="98.569" y="1.421"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="98.569" y="2.221"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_repo_hash_key: string = not null</text>
+<text x="98.569" y="3.021"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="98.569" y="3.821"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="98.569" y="4.621"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++date_info: string = not null</text>
+<text x="98.569" y="5.421"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++count_total: uint = not null</text>
+<text x="98.569" y="6.221"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++uniques_total: uint = not null</text>
+<rect x="98.419" y="6.521" width="14.745" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="97.161,2.021 95.117,2.021 95.117,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="98.419,2.021 97.719,2.261 97.019,2.021 97.719,1.781 "/>
+<!-- UML - Class -->
+<rect x="100.686" y="10.685" width="14.745" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="108.059" y="11.635"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_repo_traffic_clones</text>
+<rect x="100.686" y="12.085" width="14.745" height="5.800" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="100.836" y="12.785"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="100.836" y="13.585"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_repo_hash_key: string = not null</text>
+<text x="100.836" y="14.385"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="100.836" y="15.185"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="100.836" y="15.985"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++date_info: string = not null</text>
+<text x="100.836" y="16.785"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++count_total: uint = not null</text>
+<text x="100.836" y="17.585"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++uniques_count: uint = not null</text>
+<rect x="100.686" y="17.885" width="14.745" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="99.427,13.385 97.762,13.385 97.762,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="100.686,13.385 99.986,13.625 99.286,13.385 99.986,13.145 "/>
+<!-- UML - Class -->
+<rect x="132.690" y="130.087" width="20.905" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="143.142" y="131.037"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_pull_request_commit</text>
+<rect x="132.690" y="131.487" width="20.905" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="132.840" y="132.187"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="132.840" y="132.987"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="132.840" y="133.787"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_pull_request_commit_hash_key: string = not null</text>
+<text x="132.840" y="134.587"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_pull_request_hash_key: string = not null</text>
+<text x="132.840" y="135.387"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_commit_hash_key: string = not null</text>
+<rect x="132.690" y="135.687" width="20.905" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="131.431,135.187 108.057,135.187 108.057,113.134 102.916,113.134 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="132.690,135.187 131.990,135.427 131.290,135.187 131.990,134.947 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="154.854,134.387 158.556,134.387 158.556,108.235 131.863,108.235 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="153.595,134.387 154.295,134.147 154.995,134.387 154.295,134.627 "/>
+<!-- UML - Class -->
+<rect x="91.692" y="34.204" width="19.365" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="101.374" y="35.154"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_milestones</text>
+<rect x="91.692" y="35.604" width="19.365" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="91.842" y="36.304"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="91.842" y="37.104"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="91.842" y="37.904"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_milestones_hash_key: string = not null</text>
+<text x="91.842" y="38.704"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="91.842" y="39.504"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_milestones_hash_key: string = not null</text>
+<rect x="91.692" y="39.804" width="19.365" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="90.433,38.504 90.145,38.504 90.145,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="91.692,38.504 90.992,38.744 90.292,38.504 90.992,38.264 "/>
+<!-- UML - Class -->
+<rect x="98.322" y="49.420" width="17.055" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="106.850" y="50.370"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_milestones</text>
+<rect x="98.322" y="50.820" width="17.055" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="98.472" y="51.520"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="98.472" y="52.320"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="98.472" y="53.120"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_milestones_hash_key: string = not null</text>
+<text x="98.472" y="53.920"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="98.322" y="54.220" width="17.055" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="91.379,40.523 89.942,46.112 89.942,46.112 98.322,52.920 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="91.692,39.304 91.750,40.042 91.343,40.660 91.285,39.922 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="118.933,40.360 117.814,40.360 117.814,52.920 115.377,52.920 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="120.192,40.360 119.492,40.600 118.792,40.360 119.492,40.120 "/>
+<!-- UML - Class -->
+<rect x="88.139" y="57.399" width="17.055" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="96.667" y="58.349"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_issue_milestones</text>
+<rect x="88.139" y="58.799" width="17.055" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="88.289" y="59.499"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="88.289" y="60.299"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="88.289" y="61.099"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_user_hash_key: string = not null</text>
+<text x="88.289" y="61.899"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_issue_hash_key: string = not null</text>
+<text x="88.289" y="62.699"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_milestones_hash_key: string = not null</text>
+<rect x="88.139" y="62.999" width="17.055" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="87.707,61.316 86.389,57.709 86.389,57.709 98.322,52.920 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="88.139,62.499 87.674,61.923 87.659,61.184 88.125,61.759 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="106.453,61.699 108.794,61.699 108.794,91.629 104.324,91.629 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="105.194,61.699 105.894,61.459 106.594,61.699 105.894,61.939 "/>
+<!-- UML - Class -->
+<rect x="55.974" y="41.521" width="18.210" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="65.079" y="42.471"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_project</text>
+<rect x="55.974" y="42.921" width="18.210" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="56.124" y="43.621"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="56.124" y="44.421"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="56.124" y="45.221"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_project_hash_key: string = not null</text>
+<text x="56.124" y="46.021"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="56.124" y="46.821"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_project_hash_key: string = not null</text>
+<rect x="55.974" y="47.121" width="18.210" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="60.434" y="49.891" width="15.900" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="68.384" y="50.841"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_project</text>
+<rect x="60.434" y="51.291" width="15.900" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="60.584" y="51.991"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="60.584" y="52.791"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="60.584" y="53.591"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_project_hash_key: string = not null</text>
+<text x="60.584" y="54.391"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="60.434" y="54.691" width="15.900" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="75.048,47.536 77.384,50.006 77.384,50.006 76.334,53.391 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="74.184,46.621 74.839,46.965 75.146,47.638 74.490,47.295 "/>
+<!-- UML - Class -->
+<rect x="60.939" y="56.581" width="15.900" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="68.889" y="57.531"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_project</text>
+<rect x="60.939" y="57.981" width="15.900" height="7.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="61.089" y="58.681"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="61.089" y="59.481"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_project_hash_key: string = not null</text>
+<text x="61.089" y="60.281"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="61.089" y="61.081"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="61.089" y="61.881"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="61.089" y="62.681"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++body: string</text>
+<text x="61.089" y="63.481"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++number: uint = not null</text>
+<text x="61.089" y="64.281"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++state: string = not null</text>
+<text x="61.089" y="65.081"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<rect x="60.939" y="65.381" width="15.900" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="60.296,58.199 59.189,56.336 59.189,56.336 60.434,53.391 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="60.939,59.281 60.375,58.802 60.224,58.077 60.788,58.557 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="42.239,61.564 35.046,61.564 35.046,65.151 28.636,65.151 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="43.497,61.564 42.797,61.804 42.097,61.564 42.797,61.324 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="74.459,44.593 76.647,34.835 76.647,34.835 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="74.184,45.821 74.103,45.086 74.490,44.455 74.571,45.191 "/>
+<!-- UML - Class -->
+<rect x="32.974" y="36.568" width="17.825" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="41.886" y="37.518"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_org_project</text>
+<rect x="32.974" y="37.968" width="17.825" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="33.124" y="38.668"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="33.124" y="39.468"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="33.124" y="40.268"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_org_project_hash_key: string = not null</text>
+<text x="33.124" y="41.068"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_org_hash_key: string = not null</text>
+<text x="33.124" y="41.868"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_project_hash_key: string = not null</text>
+<rect x="32.974" y="42.168" width="17.825" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="31.715,40.867 20.967,40.867 20.967,21.693 14.940,21.693 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="32.974,40.867 32.274,41.108 31.574,40.867 32.274,40.627 "/>
+<!-- UML - Class -->
+<rect x="111.273" y="65.866" width="22.445" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="122.495" y="66.816"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_pull_request_milestones</text>
+<rect x="111.273" y="67.266" width="22.445" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="111.423" y="67.966"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="111.423" y="68.766"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="111.423" y="69.566"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_pull_request_milestones_hash_key: string = not null</text>
+<text x="111.423" y="70.366"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_pull_request_hash_key: string = not null</text>
+<text x="111.423" y="71.166"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_milestones_hash_key: string = not null</text>
+<rect x="111.273" y="71.466" width="22.445" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="110.014,70.966 109.523,70.966 109.523,61.943 116.427,61.943 116.427,52.920 115.377,52.920 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="111.273,70.966 110.573,71.206 109.873,70.966 110.573,70.726 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="134.977,70.166 136.091,70.166 136.091,108.235 131.863,108.235 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="133.718,70.166 134.418,69.926 135.118,70.166 134.418,70.406 "/>
+<!-- UML - Class -->
+<rect x="99.141" y="-48.895" width="14.745" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="106.513" y="-47.944"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_repo_downloads</text>
+<rect x="99.141" y="-47.495" width="14.745" height="9.000" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="99.291" y="-46.794"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="99.291" y="-45.994"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_user_hash_key: string = not null</text>
+<text x="99.291" y="-45.194"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="99.291" y="-44.394"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="99.291" y="-43.594"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++url: string = not null</text>
+<text x="99.291" y="-42.794"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++id: uint = not null</text>
+<text x="99.291" y="-41.994"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="99.291" y="-41.194"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++description: string = not null</text>
+<text x="99.291" y="-40.394"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++size: uint = not null</text>
+<text x="99.291" y="-39.594"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++download_count: uint = not null</text>
+<text x="99.291" y="-38.794"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++content_type: string = not null</text>
+<rect x="99.141" y="-38.495" width="14.745" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="97.882,-46.194 89.866,-46.194 89.866,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="99.141,-46.194 98.441,-45.954 97.741,-46.194 98.441,-46.434 "/>
+<!-- UML - Class -->
+<rect x="56.245" y="-65.283" width="18.595" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="65.543" y="-64.333"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_releases</text>
+<rect x="56.245" y="-63.883" width="18.595" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="56.395" y="-63.183"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="56.395" y="-62.383"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="56.395" y="-61.583"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_releases_hash_key: string = not null</text>
+<text x="56.395" y="-60.783"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="56.395" y="-59.983"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_releases_hash_key: string = not null</text>
+<rect x="56.245" y="-59.683" width="18.595" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="76.099,-60.983 79.139,-60.983 79.139,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="74.840,-60.983 75.540,-61.223 76.240,-60.983 75.540,-60.743 "/>
+<!-- UML - Class -->
+<rect x="50.245" y="-41.922" width="16.285" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="58.387" y="-40.972"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_releases</text>
+<rect x="50.245" y="-40.522" width="16.285" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="50.395" y="-39.822"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="50.395" y="-39.022"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="50.395" y="-38.222"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_releases_hash_key: string = not null</text>
+<text x="50.395" y="-37.422"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="50.245" y="-37.122" width="16.285" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="76.099,-60.183 76.025,-60.183 76.025,-38.422 66.530,-38.422 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="74.840,-60.183 75.540,-60.423 76.240,-60.183 75.540,-59.943 "/>
+<!-- UML - Class -->
+<rect x="55.889" y="-57.162" width="16.285" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="64.031" y="-56.212"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_releases</text>
+<rect x="55.889" y="-55.762" width="16.285" height="11.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="56.039" y="-55.062"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="56.039" y="-54.262"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_releases_hash_key: string = not null</text>
+<text x="56.039" y="-53.462"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="56.039" y="-52.662"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="56.039" y="-51.862"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++tag_name: string = not null</text>
+<text x="56.039" y="-51.062"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="56.039" y="-50.262"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++body: string = not null</text>
+<text x="56.039" y="-49.462"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++draft: bool = not null</text>
+<text x="56.039" y="-48.662"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++prerelease: bool = not null</text>
+<text x="56.039" y="-47.862"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="56.039" y="-47.062"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++published_at: string</text>
+<text x="56.039" y="-46.262"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++author_name: string = not null</text>
+<text x="56.039" y="-45.462"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++author_id: uint = not null</text>
+<text x="56.039" y="-44.662"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++asset_download_url: string = not_null</text>
+<rect x="55.889" y="-44.362" width="16.285" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="55.082,-53.495 49.195,-46.442 49.195,-46.442 50.245,-38.422 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="55.889,-54.462 55.624,-53.770 54.991,-53.387 55.256,-54.078 "/>
+<!-- UML - Class -->
+<rect x="24.590" y="51.490" width="18.210" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="33.695" y="52.440"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_team_project</text>
+<rect x="24.590" y="52.890" width="18.210" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="24.740" y="53.590"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="24.740" y="54.390"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="24.740" y="55.190"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_team_project_hash_key: string = not null</text>
+<text x="24.740" y="55.990"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_team_hash_key: string = not null</text>
+<text x="24.740" y="56.790"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_project_hash_key: string = not null</text>
+<rect x="24.590" y="57.090" width="18.210" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="23.421,56.256 12.841,60.471 12.841,60.471 13.891,65.151 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="24.590,55.790 24.028,56.272 23.289,56.308 23.851,55.826 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="44.058,56.590 51.967,56.590 51.967,53.391 60.434,53.391 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="42.800,56.590 43.500,56.350 44.200,56.590 43.500,56.830 "/>
+<!-- UML - Class -->
+<rect x="36.096" y="78.564" width="17.440" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="44.816" y="79.514"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_discussions</text>
+<rect x="36.096" y="79.964" width="17.440" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="36.246" y="80.664"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="36.246" y="81.464"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="36.246" y="82.264"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_discussions_hash_key: string = not null</text>
+<text x="36.246" y="83.064"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="36.096" y="83.364" width="17.440" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="37.998" y="71.066" width="19.750" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="47.873" y="72.016"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_team_discussions</text>
+<rect x="37.998" y="72.466" width="19.750" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="38.148" y="73.166"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="38.148" y="73.966"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="38.148" y="74.766"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_team_discussions_hash_key: string = not null</text>
+<text x="38.148" y="75.566"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_team_hash_key: string = not null</text>
+<text x="38.148" y="76.366"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_discussions_hash_key: string = not null</text>
+<rect x="37.998" y="76.666" width="19.750" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="58.391,77.248 59.498,79.115 59.498,79.115 53.536,82.064 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="57.748,76.166 58.312,76.646 58.463,77.370 57.899,76.891 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="36.740,75.366 36.331,75.366 36.331,65.151 28.636,65.151 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="37.998,75.366 37.298,75.606 36.598,75.366 37.298,75.126 "/>
+<!-- UML - Class -->
+<rect x="35.981" y="84.839" width="17.440" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="44.701" y="85.789"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_discussions</text>
+<rect x="35.981" y="86.239" width="17.440" height="13.800" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="36.131" y="86.939"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="36.131" y="87.739"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_discussions_hash_key: string = not null</text>
+<text x="36.131" y="88.539"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="36.131" y="89.339"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="36.131" y="90.139"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++author_name: string = not null</text>
+<text x="36.131" y="90.939"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++author_id: uint = not null</text>
+<text x="36.131" y="91.739"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++body_html: string = not null</text>
+<text x="36.131" y="92.539"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++body_version: string = not null</text>
+<text x="36.131" y="93.339"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++comments_count: uint = not null</text>
+<text x="36.131" y="94.139"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++comments_url: string = not null</text>
+<text x="36.131" y="94.939"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="36.131" y="95.739"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++last_edited_at: string</text>
+<text x="36.131" y="96.539"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++html_url: string = not null</text>
+<text x="36.131" y="97.339"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++number: uint = not null</text>
+<text x="36.131" y="98.139"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++pinned: bool = not null</text>
+<text x="36.131" y="98.939"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++private: bool = not null</text>
+<text x="36.131" y="99.739"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++title: string = not null</text>
+<rect x="35.981" y="100.039" width="17.440" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="35.303,86.479 34.231,84.802 34.231,84.802 36.096,82.064 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="35.981,87.539 35.402,87.079 35.227,86.360 35.806,86.820 "/>
+<!-- UML - Class -->
+<rect x="28.876" y="-73.837" width="11.665" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="34.709" y="-72.887"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_events</text>
+<rect x="28.876" y="-72.437" width="11.665" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="29.026" y="-71.737"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="29.026" y="-70.937"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="29.026" y="-70.137"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_events_hash_key: string</text>
+<text x="29.026" y="-69.337"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: string = not null</text>
+<rect x="28.876" y="-69.037" width="11.665" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="62.425" y="-86.663" width="17.440" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="71.145" y="-85.713"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_event</text>
+<rect x="62.425" y="-85.263" width="17.440" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="62.575" y="-84.563"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="62.575" y="-83.763"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="62.575" y="-82.963"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_event_hash_key: string = not null</text>
+<text x="62.575" y="-82.163"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="62.575" y="-81.363"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_event_hash_key: string = not null</text>
+<rect x="62.425" y="-81.063" width="17.440" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="-16.781" y="-48.426" width="17.055" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-8.254" y="-47.476"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_org_event</text>
+<rect x="-16.781" y="-47.026" width="17.055" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-16.631" y="-46.326"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="-16.631" y="-45.526"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="-16.631" y="-44.726"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_org_event_hash_key: string = not null</text>
+<text x="-16.631" y="-43.926"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_org_hash_key: string = not null</text>
+<text x="-16.631" y="-43.126"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_event_hash_key: string = not null</text>
+<rect x="-16.781" y="-42.826" width="17.055" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="81.124,-82.363 84.140,-82.363 84.140,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="79.865,-82.363 80.565,-82.603 81.265,-82.363 80.565,-82.123 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="61.167,-81.563 51.133,-81.563 51.133,-70.337 40.541,-70.337 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="62.425,-81.563 61.725,-81.323 61.025,-81.563 61.725,-81.803 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="1.532,-43.326 16.350,-43.326 16.350,-70.337 28.876,-70.337 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="0.274,-43.326 0.974,-43.566 1.674,-43.326 0.974,-43.086 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-18.040,-44.126 -21.192,-44.126 -21.192,21.693 0.580,21.693 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-16.781,-44.126 -17.481,-43.886 -18.181,-44.126 -17.481,-44.366 "/>
+<!-- UML - Class -->
+<rect x="28.220" y="-89.329" width="15.515" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="35.978" y="-88.379"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_events</text>
+<rect x="28.220" y="-87.929" width="15.515" height="12.200" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="28.370" y="-87.229"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="28.370" y="-86.429"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_events_hash_key: string = not null</text>
+<text x="28.370" y="-85.629"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="28.370" y="-84.829"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="28.370" y="-84.029"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++type: string = not null</text>
+<text x="28.370" y="-83.229"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++public: bool = not null</text>
+<text x="28.370" y="-82.429"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++payload: jsonb</text>
+<text x="28.370" y="-81.629"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++repo_id: uint = not null</text>
+<text x="28.370" y="-80.829"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++repo_name: string = not null</text>
+<text x="28.370" y="-80.029"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++repo_url: string = not null</text>
+<text x="28.370" y="-79.229"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++actor_id: uint = not null</text>
+<text x="28.370" y="-78.429"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++actor_login: string = not null</text>
+<text x="28.370" y="-77.629"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++actor_display_login: string</text>
+<text x="28.370" y="-76.829"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="28.370" y="-76.029"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++issue: jsonb</text>
+<rect x="28.220" y="-75.729" width="15.515" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="27.956,-85.399 26.470,-78.483 26.470,-78.483 28.876,-70.337 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="28.220,-86.629 28.308,-85.894 27.926,-85.260 27.839,-85.995 "/>
+<!-- UML - Class -->
+<rect x="29.368" y="-62.935" width="12.050" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="35.393" y="-61.985"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_webhooks</text>
+<rect x="29.368" y="-61.535" width="12.050" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="29.518" y="-60.835"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="29.518" y="-60.035"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="29.518" y="-59.235"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_webhooks_hash_key: string</text>
+<text x="29.518" y="-58.435"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: string = not null</text>
+<rect x="29.368" y="-58.135" width="12.050" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Class -->
+<rect x="59.946" y="-76.214" width="18.595" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="69.244" y="-75.264"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_webhooks</text>
+<rect x="59.946" y="-74.814" width="18.595" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="60.096" y="-74.114"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="60.096" y="-73.314"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="60.096" y="-72.514"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_webhooks_hash_key: string = not null</text>
+<text x="60.096" y="-71.714"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="60.096" y="-70.914"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_webhooks_hash_key: string = not null</text>
+<rect x="59.946" y="-70.614" width="18.595" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="79.800,-71.914 80.779,-71.914 80.779,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="78.541,-71.914 79.241,-72.154 79.941,-71.914 79.241,-71.674 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="58.688,-71.114 54.552,-71.114 54.552,-59.435 41.418,-59.435 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="59.946,-71.114 59.246,-70.874 58.546,-71.114 59.246,-71.354 "/>
+<!-- UML - Class -->
+<rect x="-10.001" y="-40.758" width="18.595" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-0.704" y="-39.807"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_webhooks</text>
+<rect x="-10.001" y="-39.358" width="18.595" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="-9.851" y="-38.657"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="-9.851" y="-37.857"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="-9.851" y="-37.057"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_webhooks_hash_key: string = not null</text>
+<text x="-9.851" y="-36.257"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="-9.851" y="-35.457"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_webhooks_hash_key: string = not null</text>
+<rect x="-10.001" y="-35.157" width="18.595" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="9.852,-35.658 19.331,-35.658 19.331,-59.435 29.368,-59.435 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="8.594,-35.658 9.294,-35.898 9.994,-35.658 9.294,-35.418 "/>
+<!-- UML - Class -->
+<rect x="28.958" y="-56.684" width="16.285" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="37.101" y="-55.734"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_webhooks</text>
+<rect x="28.958" y="-55.285" width="16.285" height="12.200" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="29.108" y="-54.584"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="29.108" y="-53.784"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_webhooks_hash_key: string = not null</text>
+<text x="29.108" y="-52.984"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="29.108" y="-52.184"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="29.108" y="-51.384"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++url: string = not null</text>
+<text x="29.108" y="-50.584"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++ping_url: string = not null</text>
+<text x="29.108" y="-49.784"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++name: string = not null</text>
+<text x="29.108" y="-48.984"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++events: string[] = not null</text>
+<text x="29.108" y="-48.184"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++active: bool = not null</text>
+<text x="29.108" y="-47.384"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++config_url: string</text>
+<text x="29.108" y="-46.584"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++config_content_type: string</text>
+<text x="29.108" y="-45.784"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++config_secret: secret</text>
+<text x="29.108" y="-44.984"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++config_insecure_ssl: string</text>
+<text x="29.108" y="-44.184"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++created_at: string = not null</text>
+<text x="29.108" y="-43.384"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++updated_at: string</text>
+<rect x="28.958" y="-43.084" width="16.285" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="-11.260,-36.458 -12.995,-36.458 -12.995,21.693 0.580,21.693 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="-10.001,-36.458 -10.701,-36.218 -11.401,-36.458 -10.701,-36.698 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="46.502,-53.984 47.417,-53.984 47.417,-59.435 41.418,-59.435 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="45.243,-53.984 45.943,-54.224 46.643,-53.984 45.943,-53.744 "/>
+<!-- UML - Class -->
+<rect x="46.828" y="12.970" width="19.365" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="56.510" y="13.920"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_statistics</text>
+<rect x="46.828" y="14.370" width="19.365" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="46.978" y="15.070"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="46.978" y="15.870"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="46.978" y="16.670"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_statistics_hash_key: string = not null</text>
+<text x="46.978" y="17.470"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="46.978" y="18.270"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_statistics_hash_key: string = not null</text>
+<rect x="46.828" y="18.570" width="19.365" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="45.569,17.270 44.302,17.270 44.302,23.848 60.852,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="46.828,17.270 46.128,17.510 45.428,17.270 46.128,17.030 "/>
+<!-- UML - Class -->
+<rect x="41.418" y="0.367" width="17.055" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="49.945" y="1.317"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_statistics</text>
+<rect x="41.418" y="1.767" width="17.055" height="6.600" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="41.568" y="2.467"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="41.568" y="3.267"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_statistics_hash_key: string = not null</text>
+<text x="41.568" y="4.067"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="41.568" y="4.867"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="41.568" y="5.667"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++week: string = not null</text>
+<text x="41.568" y="6.467"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++add_count: uint = not null</text>
+<text x="41.568" y="7.267"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++delete_count: uint = not null</text>
+<text x="41.568" y="8.067"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++change_count: uint = not null</text>
+<rect x="41.418" y="8.367" width="17.055" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="67.396,17.701 78.115,14.411 78.115,14.411 77.065,10.752 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="66.193,18.070 66.791,17.635 67.531,17.659 66.932,18.094 "/>
+<!-- UML - Class -->
+<rect x="62.320" y="7.252" width="14.745" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="69.692" y="8.202"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_repo_statistics</text>
+<rect x="62.320" y="8.652" width="14.745" height="2.600" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="62.470" y="9.352"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="62.470" y="10.152"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="62.470" y="10.952"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_repo_statistics_hash_key: string</text>
+<rect x="62.320" y="11.252" width="14.745" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="59.731,3.067 60.746,3.067 60.746,10.752 62.320,10.752 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="58.473,3.067 59.173,2.827 59.873,3.067 59.173,3.307 "/>
+<!-- UML - Class -->
+<rect x="58.833" y="-9.080" width="17.055" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="67.360" y="-8.130"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_statistics</text>
+<rect x="58.833" y="-7.680" width="17.055" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="58.983" y="-6.980"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="58.983" y="-6.180"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="58.983" y="-5.380"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_user_hash_key: string = not null</text>
+<text x="58.983" y="-4.580"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="58.983" y="-3.780"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_statistics_hash_key: string = not null</text>
+<rect x="58.833" y="-3.480" width="17.055" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="76.252,-2.776 78.115,3.386 78.115,3.386 77.065,10.752 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="75.888,-3.980 76.320,-3.380 76.293,-2.640 75.861,-3.241 "/>
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="75.888,-6.039 75.888,-5.422 77.930,-5.422 77.930,-12.118 54.307,-12.118 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="75.888,-4.780 75.648,-5.480 75.888,-6.180 76.128,-5.480 "/>
+<!-- UML - Class -->
+<rect x="89.936" y="-59.223" width="21.290" height="1.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="100.581" y="-58.273"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+link_repo_vulnerabilities</text>
+<rect x="89.936" y="-57.823" width="21.290" height="4.200" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<text x="90.086" y="-57.123"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="90.086" y="-56.323"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="90.086" y="-55.523"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#link_repo_vulnerabilities_hash_key: string = not null</text>
+<text x="90.086" y="-54.723"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_repo_hash_key: string = not null</text>
+<text x="90.086" y="-53.923"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hub_vulnerabilities_hash_key: string = not null</text>
+<rect x="89.936" y="-53.623" width="21.290" height="0.400" fill="#00FF00" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="88.678,-54.923 86.085,-54.923 86.085,23.848 75.597,23.848 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="89.936,-54.923 89.236,-54.683 88.536,-54.923 89.236,-55.163 "/>
+<!-- UML - Class -->
+<rect x="91.954" y="-65.530" width="18.980" height="1.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="101.444" y="-64.580"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+hub_vulnerabilities</text>
+<rect x="91.954" y="-64.130" width="18.980" height="3.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<text x="92.105" y="-63.430"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="92.105" y="-62.630"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++rec_src: string = not null</text>
+<text x="92.105" y="-61.830"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_vulnerabilities_hash_key: string = not null</text>
+<text x="92.105" y="-61.030"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++gh_id: uint = not null</text>
+<rect x="91.954" y="-60.730" width="18.980" height="0.400" fill="#1E90FF" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="111.736,-55.274 112.976,-58.077 112.976,-58.077 110.934,-62.030 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="111.226,-54.123 111.290,-54.861 111.793,-55.404 111.729,-54.666 "/>
+<!-- UML - Class -->
+<rect x="91.618" y="-78.711" width="18.980" height="1.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="101.108" y="-77.761"  fill="#000000" text-anchor="middle" font-size="1.00" font-family="sans" font-style="normal" font-weight="700">
+sat_vulnerabilities</text>
+<rect x="91.618" y="-77.311" width="18.980" height="9.000" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<text x="91.768" y="-76.611"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_date: string = not null</text>
+<text x="91.768" y="-75.811"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
+#hub_vulnerabilities_hash_key: string = not null</text>
+<text x="91.768" y="-75.011"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++load_end_date: string</text>
+<text x="91.768" y="-74.211"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++hash_diff: string = not null</text>
+<text x="91.768" y="-73.411"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++package_name: string = not null</text>
+<text x="91.768" y="-72.611"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++fixed_in: string = not null</text>
+<text x="91.768" y="-71.811"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++affected_range: string = not null</text>
+<text x="91.768" y="-71.011"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++dismiss_reason: string</text>
+<text x="91.768" y="-70.211"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++dissmissed_at: string</text>
+<text x="91.768" y="-69.411"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++external_identifier: string = not null</text>
+<text x="91.768" y="-68.611"  fill="#000000" text-anchor="start" font-size="0.80" font-family="monospace" font-style="normal" font-weight="400">
++external_reference: string = not null</text>
+<rect x="91.618" y="-68.311" width="18.980" height="0.400" fill="#FFA500" stroke="#000000" stroke-width="0.100" />
+<!-- UML - Association -->
+<polyline fill="none" stroke="#000000" stroke-width="0.100"  points="91.313,-74.790 89.868,-69.021 89.868,-69.021 91.954,-62.030 "/>
+<polygon fill="#000000" stroke="#000000" stroke-width="0.100"  points="91.618,-76.011 91.681,-75.274 91.278,-74.653 91.215,-75.390 "/>
+</g>
+</svg>
