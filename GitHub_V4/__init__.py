@@ -11,6 +11,7 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
+import boto3
 import datetime
 import json
 import logging
@@ -110,7 +111,7 @@ class GitHub_v4:
                 msg = f"Error when requesting: {query} {variables} {headers} and got response: {response}"
                 raise GitHubV4Error(msg)
 
-    def write_data_for_org(self, org):
+    def write_data_for_org_disk(self, org):
         """
         Get the CVE information for the current org and write them to file
         Returns: Array of file names created
@@ -141,12 +142,39 @@ class GitHub_v4:
             file_list.append(file_name)
         return file_list
 
+    def write_repo_traffic_to_s3(self, org, repo):
+        """
+        Write repo traffic to S3
+
+        Note: Use print here as logging doesn't appear in CloudWatch output
+        """
+        print(f"Starting processing of {org}/{repo}")
+        # setup for storing in S3
+        s3 = boto3.resource("s3")
+        bucket_name = "oss-datastore-staging"
+        bucket = s3.Bucket(bucket_name)
+        try:
+            # now get repo info
+            repo_traffic = self.get_data_for_repo(org, repo)
+        except GitHubV4Error:
+            raise
+        curr_date_full = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
+        curr_date = datetime.datetime.now().strftime("%Y-%m-%d")
+        file_path_and_name = (
+            f"{curr_date}/cve/{org}-{repo}-traffic-{curr_date_full}.json"
+        )
+        # write directly to S3
+        bucket.put_object(
+            Body=json.dumps(repo_traffic), Bucket=bucket_name, Key=file_path_and_name
+        )
+        print(f"Processing of {org}/{repo} complete.")
+
     def get_data_for_repo(
         self, org, repo, page_info={"endCursor": None, "hasNextPage": False}
     ):
         """
         Get paginated data for a repo
-        Returns: 
+        Returns: full paginated contents of data for a repo 
         """
         query = self.repo.get_repo_info_query()
         variables = {"org_name": org, "repo_name": repo, "first": 100}

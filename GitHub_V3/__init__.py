@@ -11,6 +11,7 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
+import boto3
 import datetime
 import json
 import logging
@@ -120,9 +121,9 @@ class GitHub_v3:
         """
         return self.github_v3_run_query("/rate_limit")
 
-    def write_org_traffic(self, org):
+    def write_org_traffic(self, org, run_lambda=False):
         """
-        Get the orgs repo traffic and write them to file.
+        Get the orgs repo traffic and write them to their respective locations.
         Returns: array of file names created
         """
         rate_limit = self.get_api_rate_limit()
@@ -134,17 +135,62 @@ class GitHub_v3:
             d1 = datetime.datetime.now()
             d2 = datetime.datetime.fromtimestamp(rate_limit["rate"]["reset"])
             time.sleep((d2 - d1).seconds + self.sleep_time)
-        repo_list = self.get_repo(org)
+        repo_list = self.get_repos(org)
         repo_files = []
         for repo_info in repo_list:
-            repo_files.append(self.write_repo_traffic(org, repo_info["name"]))
+            repo_name = repo_info["name"]
+            if run_lambda is False:
+                file_name = self.write_repo_traffic_to_disk(org, repo_name)
+                repo_files.append(file_name)
+            else:
+                self.write_repo_traffic_to_s3(org, repo_name)
         return repo_files
 
-    def write_repo_traffic(self, org, repo):
+    def write_repo_traffic_to_disk(self, org, repo):
         """
-        Get repo traffic info (referrers, paths, views, clones) for a
-        repo and write to file.
-        Returns: file name
+        Write repo traffic to disk
+        Returns: file name of json written to disk
+        """
+        repo_info = self.get_repo_traffic(org, repo)
+        curr_date = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
+        file_name = f"{org}-{repo}-traffic-{curr_date}.json"
+        self.write_structured_json(file_name, repo_info)
+        logging.info(f"Traffic and stats for {org}/{repo} written to file {file_name}")
+        return file_name
+
+    def write_repo_traffic_to_s3(self, org, repo):
+        """
+        Write repo traffic to S3
+
+        Note: Use print here as logging doesn't appear in CloudWatch output
+        """
+        print(f"Starting processing of {org}/{repo}")
+        # setup for storing in S3
+        s3 = boto3.resource("s3")
+        bucket_name = (
+            "oss-datastore-staging"
+        )  # TODO: convert to config file linked to .env
+        bucket = s3.Bucket(bucket_name)
+        try:
+            # now get repo info
+            repo_traffic = self.get_repo_traffic(org, repo, lambda_active=True)
+        except GitHubV3Error:
+            raise
+        curr_date_full = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
+        curr_date = datetime.datetime.now().strftime("%Y-%m-%d")
+        file_path_and_name = (
+            f"{curr_date}/traffic/{org}-{repo}-traffic-{curr_date_full}.json"
+        )
+        # write directly to S3
+        bucket.put_object(
+            Body=json.dumps(repo_traffic), Bucket=bucket_name, Key=file_path_and_name
+        )
+        print(f"Processing of {org}/{repo} complete.")
+
+    def get_repo_traffic(self, org, repo, lambda_active=False):
+        """
+        Get repo traffic info (referrers, paths, views, clones) for a repo.
+        Returns: JSON object of traffic data
 
         Note: These sometimes fail the first request but there is no pagination.
               That being said, the retry takes care of getting the data since it
@@ -174,19 +220,15 @@ class GitHub_v3:
             )
             repo_info["stats"]["punch_card"] = self.get_stats_punch_card(org, repo)
 
-            currDate = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
-            file_name = f"{org}-{repo}-traffic-{currDate}.json"
-            self.write_structured_json(file_name, repo_info)
-            logging.info(
-                f"Traffic and stats for {org}/{repo} written to file {file_name}"
-            )
-            return file_name
+            return repo_info
         except GitHubV3Error as e:
             # log critical error
             logging.critical(e.args)
+            if lambda_active is True:
+                raise
             # not going to raise we need it to move onto the next repo
 
-    def get_repo(self, org):
+    def get_repos(self, org):
         return self.github_v3_run_query(f"/orgs/{org}/repos")
 
     def get_files(self, org, repo):

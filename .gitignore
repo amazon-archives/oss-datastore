@@ -2,3 +2,5 @@
 .vscode
 output
 .env
+cdk.out
+lambda/package.zip

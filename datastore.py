@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License").
@@ -11,14 +13,17 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
+# full imports
 import argparse
 import boto3
 import logging
 import os
 import shutil
-from dotenv import load_dotenv
-from pg import DB
 
+# cherry-pick imports
+from dotenv import load_dotenv
+
+# imports from my biz
 from GitHub_V3 import GitHub_v3 as ghv3_api
 from GitHub_V4 import GitHub_v4 as ghv4_api
 
@@ -55,7 +60,7 @@ def upload_files_to_s3(s3):
 
 if __name__ == "__main__":
     args = parser.parse_args()
-    load_dotenv()
+    load_dotenv(override=True)
 
     # set logging level
     logging.basicConfig(format="%(levelname)s:%(message)s", level=args.logging)

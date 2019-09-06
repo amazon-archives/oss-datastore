@@ -21,7 +21,7 @@ Items that will be tracked include:
 
 This isn't the definitive list of information that will be tracked and will expand as the package grows. The tentative data model can be found in ![overview](docs/images/GH_Data_Vault_Layout.svg)
 
-## Setup
+## Setup for CLI
 You need to have pipenv installed locally
 
 > `pip install --user pipenv`
@@ -38,9 +38,31 @@ To install new dev dependencies
 
 > `pipenv install <package name> --dev`
 
-To run, ensure you have copied sample.env to .env or you export the environment variables when running from the command line, fill in the config info, and run
+To run, ensure you have copied sample.env to .env and source it or you export the environment variables when running from the command line, fill in the config info, and run
 
 > `pipenv run python datastore.py`
+
+## Additional setup for AWS
+In order to get things setup for running thing in AWS you will need to export your completed .env file and run the aws-cdk bootstrap.
+
+> source .env
+
+> cdk boostrap
+
+For more information see the [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html) docs.
+
+## Deploying to AWS
+Due to limitations in the AWS-CDK you will need to follow [AWS Sectretsmanager Creat a Basic Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html) and set the name and secret key to 'OSS-Datastore-GitHub-Token'.
+All you have left to do is run the following from the root folder:
+
+> ./lambda_setup_deploy.sh
+
+This will create and launch a Cloudformation template to build the resources we need in AWS. **** THIS WILL COST YOU MONEY ****
+
+### Notes on running in AWS
+This will charge *YOUR* account so you should keep that in mind when running this package.
+
+The cron scheduler is setup to run once every 24 hours and is kicked off at 00:00 in the morning. This was selected to ensure the pulls don't interfere with PST working hours. The schedule can be altered in [oss_datastore_lambda_stack.py](infra/oss_datastore_lambda/oss_datastore_lambda_stack.py)
 
 ## Note on the Dead Letter Queue
 In order to ensure that our data is being pulled and stored from the GitHub API I track and store failed requests in a Dead Letter Queue (DLQ) for manual action. My intention is to attach monitoring to the DLQ and alarm/alert when a new item is added so an admin can investigate why the request failed. Since the reason for the failure can occur for many different reasons I track the infomration about which API version failed, the query/request that failed, and the response body/headers/status code for analysis. From there it is on the admin to take action to ensure the request is retried and the data is successfully stored.
@@ -52,11 +74,9 @@ In order to ensure that our data is being pulled and stored from the GitHub API 
      * [X] CVE information
      * [X] Stargazers
      * [X] Watchers
+     * [X] Add AWS Lambda setup/deploy/functionality
      * [ ] Figure out how to get the remaining in a sane manner[repo information](https://developer.github.com/v4/object/repository/), [team information](https://developer.github.com/v4/object/team/), [user information](https://developer.github.com/v4/object/user/)
      * [ ] Implement sane tracking of remaining data
-   * [X] Dead letter queue for failed data requests in PostgreSQL
-     * [X] Define schema
-     * [X] Store data when requests fail
    * [ ] Cron job to kick-off new data requests
 * [ ] Refine data vault model in docs/images/GH_Data_Vault_Layout.jpeg
 * [ ] Data warehouse construction via AWS Cloudformation
@@ -66,11 +86,12 @@ In order to ensure that our data is being pulled and stored from the GitHub API 
     * [ ] Define and build the metrics vault
     * [ ] Define and build the business vault
 * [ ] ETL functionality
-  * [ ] Staging to dead letter queue
   * [ ] Staging to data vault
   * [ ] Staging to long term storage in Amazon S3
-* [ ] Initial data/info mart construction via AWS Cloudformation
-  * [ ] Data exploration via Amazon QuickSight
+* [ ] AWS automation via CDK
+  * [ ] Staging creation/configuration
+  * [ ] Datamart creation/configuration
+* [ ] Data exploration via Amazon QuickSight
 
 ## License
 This library is licensed under the [Apache 2.0 License](LICENSE).
