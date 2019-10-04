@@ -55,14 +55,14 @@ For more information see the [AWS CDK](https://docs.aws.amazon.com/cdk/latest/gu
 Due to limitations in the AWS-CDK you will need to follow [AWS Sectretsmanager Creat a Basic Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html) and set the name and secret key to 'OSS-Datastore-GitHub-Token'.
 All you have left to do is run the following from the root folder:
 
-> ./lambda_setup_deploy.sh
+> ./deploy_lambda.sh
 
 This will create and launch a Cloudformation template to build the resources we need in AWS. **** THIS WILL COST YOU MONEY ****
 
 ### Notes on running in AWS
 This will charge *YOUR* account so you should keep that in mind when running this package.
 
-The cron scheduler is setup to run once every 24 hours and is kicked off at 00:00 in the morning. This was selected to ensure the pulls don't interfere with PST working hours. The schedule can be altered in [oss_datastore_lambda_stack.py](infra/oss_datastore_lambda/oss_datastore_lambda_stack.py)
+The cron scheduler is setup to run once every 24 hours and is kicked off at 00:00 GMT, configurable in [oss_datastore_lambda_stack.py](infra/oss_datastore_lambda/oss_datastore_lambda_stack.py#101). This was selected to ensure the pulls don't interfere with PST working hours. The schedule can be altered in [oss_datastore_lambda_stack.py](infra/oss_datastore_lambda/oss_datastore_lambda_stack.py)
 
 ## Note on the Dead Letter Queue
 In order to ensure that our data is being pulled and stored from the GitHub API I track and store failed requests in a Dead Letter Queue (DLQ) for manual action. My intention is to attach monitoring to the DLQ and alarm/alert when a new item is added so an admin can investigate why the request failed. Since the reason for the failure can occur for many different reasons I track the infomration about which API version failed, the query/request that failed, and the response body/headers/status code for analysis. From there it is on the admin to take action to ensure the request is retried and the data is successfully stored.
