@@ -209,7 +209,7 @@ class GitHub_v3:
             # stats info found https://developer.github.com/v3/repos/statistics/
             repo_info["stats"] = {}
             repo_info["stats"]["contributors"] = self.get_stats_contributors(org, repo)
-            repo_info["stats"]["comment_activity"] = self.get_stats_common_activity(
+            repo_info["stats"]["commit_activity"] = self.get_stats_commit_activity(
                 org, repo
             )
             repo_info["stats"]["code_frequency"] = self.get_stats_code_frequency(
@@ -251,7 +251,7 @@ class GitHub_v3:
     def get_stats_contributors(self, org, repo):
         return self.github_v3_run_query(f"/repos/{org}/{repo}/stats/contributors")
 
-    def get_stats_common_activity(self, org, repo):
+    def get_stats_commit_activity(self, org, repo):
         return self.github_v3_run_query(f"/repos/{org}/{repo}/stats/commit_activity")
 
     def get_stats_code_frequency(self, org, repo):

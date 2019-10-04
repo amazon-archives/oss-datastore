@@ -96,7 +96,13 @@ class OssDatastoreLambdaStack(core.Stack):
             "Cron Rule",
             description="Setup cron schedule to get org data",
             schedule=events.Schedule.cron(
-                minute="0", hour="0", month="*", year="*", week_day="*"
+                # timezone is GMT and unconfigurable
+                # adjust accordingly for your desired timezone
+                minute="0",
+                hour="7",
+                month="*",
+                year="*",
+                week_day="*",
             ),
             targets=[targets.LambdaFunction(oss_datastore_repo_lambda)],
         )
