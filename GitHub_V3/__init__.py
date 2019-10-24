@@ -19,6 +19,8 @@ import os
 import requests
 import time
 
+from urllib.parse import parse_qs
+
 
 class GitHubV3Error(RuntimeError):
     def __init__(self, arg):
@@ -106,11 +108,20 @@ class GitHub_v3:
         start = links[1].index("<")
         end = links[1].index(">")
         last_link = links[1][start + 1 : end]
-        clean_link, page_count = last_link.split("=")
-        # re-add '=' to link
-        clean_link = clean_link + "="
+        clean_link, queries = last_link.split("?")
+        # rebuild entier query
+        clean_link = clean_link + "?"
+        last_page_num = None
+        query_map = parse_qs(queries)
+        for query in query_map:
+            if query != "page":
+                clean_link = clean_link + "&" + query + "=" + query_map[query][0]
+            else:
+                last_page_num = query_map[query][0]
+        # add page count
+        clean_link = clean_link + "&page="
         # convert page_count to int
-        page_count = int(page_count)
+        page_count = int(last_page_num)
         return page_count, clean_link
 
     def get_api_rate_limit(self):
