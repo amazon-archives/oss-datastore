@@ -65,9 +65,23 @@ class Repo:
                   vulnerabilityAlerts (first: $first after: $after) {{
                     edges {{
                       node {{
+                        createdAt
                         dismissReason
                         dismissedAt
+                        dismisser {{
+                          login
+                        }}
                         id
+                        securityAdvisory {{
+                          identifiers {{
+                            type
+                            value
+                          }}
+                          ghsaId
+                          references {{
+                            url
+                          }}
+                        }}
                         securityVulnerability {{
                           advisory {{
                             description
