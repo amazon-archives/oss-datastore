@@ -1,0 +1,133 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform:
+- AWS::Serverless-2016-10-31
+
+Parameters:
+  S3DestinationBucket:
+    Type: String
+    Description: S3 Destination bucket that has allowed access to the calling role.
+    Default: ae-evangelism-github-replica
+  S3SourceBucket:
+    Type: String
+    Description: S3 Source bucket that is in this account
+    Default: joe-test-bucket-github
+  IAMRoleToAssume:
+    Type: String
+    Description: IAM Role to assume from the other account.
+    Default: arn:aws:iam::328766500510:role/github-replication
+    
+Resources:
+  #Roles
+  LambdaExecutionRole:
+    Description: Creating service role in IAM for AWS Lambda
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: S3ReplicatorRole
+      AssumeRolePolicyDocument:
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service: [lambda.amazonaws.com]
+          Action: 
+            - sts:AssumeRole
+      # Path: /
+      Policies:
+      - PolicyDocument:
+          Statement:
+          - Action: ['cloudwatch:*', 'logs:*', 'sts:assumeRole']
+            Effect: Allow
+            Resource: '*'
+          Version: '2012-10-17'
+        PolicyName: lambdaPolicyAssumeRole
+  LambdaS3Replicator:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.replicate
+      Runtime: python3.6
+      Timeout: 15
+      Environment:
+        Variables:
+          SourceS3Bucket: {Ref: S3SourceBucket}
+          DestinationS3Bucket: {Ref: S3DestinationBucket}
+          iamRole: {Ref: IAMRoleToAssume}
+      Role:
+        Fn::GetAtt:
+        - LambdaExecutionRole
+        - Arn
+      Code:
+        ZipFile: |
+          import boto3
+          import os
+          import datetime
+          import logging
+          from botocore.exceptions import ClientError
+
+          BACKFILL_EVENT_KEY = 'backfill'
+          CONTENTS_KEY = 'Contents'
+
+          def replicate(event, context):
+              today = datetime.datetime.now().strftime("%Y-%m-%d")
+              dates = [today]
+              if BACKFILL_EVENT_KEY in event.keys() :
+                  dates = event[BACKFILL_EVENT_KEY]
+
+              REPOS = ['alexa', 'alexa-labs', 'alexa-games']
+              logger = logging.getLogger()
+              logger.setLevel(logging.INFO) #Todo bump up to warn
+
+              IAM_ROLE_ASSUME = os.environ['iamRole']
+              destinationS3Bucket = os.environ['DestinationS3Bucket']
+              sourceS3Bucket = os.environ['SourceS3Bucket']
+              try :
+                  # Get our info from the assumed role
+                  sts = boto3.client('sts')
+                  stsAssumedCredentials = sts.assume_role(
+                      RoleArn=IAM_ROLE_ASSUME,
+                      RoleSessionName='assumeForS3Copy'
+                  )['Credentials'] 
+
+                  accessId = stsAssumedCredentials['AccessKeyId']
+                  secretId = stsAssumedCredentials['SecretAccessKey']
+                  sessionToken = stsAssumedCredentials['SessionToken']
+
+                  #Now Make our call to S3 local and S3 away.
+                  s3Client = boto3.client(
+                      's3',
+                      aws_access_key_id=accessId,
+                      aws_secret_access_key=secretId,
+                      aws_session_token=sessionToken,
+                  )
+
+                  KEY_STRUCTURE_PREFIX = '{date}/traffic/{parentRepo}'#-{name}-traffic-{timestamp}.json
+
+                  for date in dates:
+                      for repo in REPOS :
+                          allObjectsWithPrefix = s3Client.list_objects_v2(
+                              Bucket=sourceS3Bucket,
+                              Prefix=KEY_STRUCTURE_PREFIX.format(date=date, parentRepo=repo)
+                          )
+                          # jsonObjectsWithPrefix = json.loads(allObjectsWithPrefix)
+                          if CONTENTS_KEY in allObjectsWithPrefix.keys():
+                              for record in allObjectsWithPrefix[CONTENTS_KEY]:
+                                  key = record['Key']
+                                  # For each record, copy
+                                  copySource = {
+                                      'Bucket':sourceS3Bucket,
+                                      'Key': key
+                                  }
+                                  s3Client.copy(copySource, destinationS3Bucket, key)
+                          else:
+                              logging.warn('Failed to find contents for repo {key} on {date}'.format(key=repo, date=date))
+              except ClientError as e: 
+                  logging.critical(e)
+                  logging.error('Failed to copy on {today}'.format(today));
+                  return {
+                      'statusCode': 500,
+                      'headers': {"Content-Type": "text/plain"},
+                      'body': 'failed on {today}'.format(today=today),
+                  }
+              return {
+                  'statusCode': 200,
+                  'headers': {"Content-Type": "text/plain"},
+                  'body': 'Succeeded on {today}'.format(today=today),
+              }
