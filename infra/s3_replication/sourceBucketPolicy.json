@@ -5,19 +5,19 @@
             "Sid": "ReadAccess",
             "Effect": "Allow",
             "Principal": {
-                "AWS": [ "arn:aws:iam::123456789012:root" ]
+                "AWS": [ "arn:aws:iam::S3_REPLICATE_OTHER_ACCOUNT:root" ]
             },
             "Action": "s3:GetObject",
-            "Resource": [ "arn:aws:s3:::source-bucket-name/*" ]
+            "Resource": [ "arn:aws:s3:::S3_ROOT_BUCKET/*" ]
         },
         {
             "Sid": "ListAccess",
             "Effect": "Allow",
             "Principal": {
-                "AWS": [ "arn:aws:iam::123456789012:root" ]
+                "AWS": [ "arn:aws:iam::S3_REPLICATE_OTHER_ACCOUNT:root" ]
             },
             "Action": "s3:ListBucket",
-            "Resource": [ "arn:aws:s3:::source-bucket-name" ]
+            "Resource": [ "arn:aws:s3:::S3_ROOT_BUCKET" ]
         }
     ]
 }

@@ -12,7 +12,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:s3:::destination-bucket-name/*"
+                "arn:aws:s3:::S3_REPLICATE_BUCKET_NAME/*"
             ]
         },
         {
@@ -21,7 +21,7 @@
             ],
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:s3:::destination-bucket-name"
+                "arn:aws:s3:::S3_REPLICATE_BUCKET_NAME"
             ]
         },
         {
@@ -29,7 +29,7 @@
             "Effect": "Allow",
             "Action": "s3:GetObject",
             "Resource": [
-                "arn:aws:s3:::source-bucket-name/*"
+                "arn:aws:s3:::S3_ROOT_BUCKET/*"
             ]
         },
         {
@@ -37,7 +37,7 @@
             "Effect": "Allow",
             "Action": "s3:ListBucket",
             "Resource": [
-                "arn:aws:s3:::source-bucket-name"
+                "arn:aws:s3:::S3_ROOT_BUCKET"
             ]
         }
     ]

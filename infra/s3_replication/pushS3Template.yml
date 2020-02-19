@@ -14,15 +14,23 @@ Parameters:
   IAMRoleToAssume:
     Type: String
     Description: IAM Role to assume from the other account.
-    Default: arn:aws:iam::328766500510:role/github-replication
-    
+    Default: arn:aws:iam::123456789012:role/github-replication
+  ListOfGithubOrgs:
+    Type: String
+    Description: Comma separated string of Github organizations to use.
+    Default: alexa,alexa-labs,alexa-games
+  LambdaRoleName:
+    Type: String
+    Description: Destination Account to push files to.
+    Default: role-123456789012
+
 Resources:
   #Roles
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
     Properties:
-      RoleName: S3ReplicatorRole
+      RoleName: {Ref: LambdaRoleName}
       AssumeRolePolicyDocument:
         Statement:
         - Effect: Allow
@@ -34,11 +42,24 @@ Resources:
       Policies:
       - PolicyDocument:
           Statement:
-          - Action: ['cloudwatch:*', 'logs:*', 'sts:assumeRole']
+          - Action: ['cloudwatch:*', 'logs:*', 'sts:assumeRole', 'lambda:InvokeFunction']
             Effect: Allow
             Resource: '*'
           Version: '2012-10-17'
         PolicyName: lambdaPolicyAssumeRole
+  S3ReplicateJob:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: "Defines event rule to run the S3 replication job."
+      ScheduleExpression: "cron(00 23 * * ? *)"
+      State: "ENABLED"
+      Targets:
+        -
+          Arn:
+            Fn::GetAtt:
+            - LambdaS3Replicator
+            - Arn
+          Id: "LambdaS3Replicator"
   LambdaS3Replicator:
     Type: AWS::Lambda::Function
     Properties:
@@ -50,6 +71,7 @@ Resources:
           SourceS3Bucket: {Ref: S3SourceBucket}
           DestinationS3Bucket: {Ref: S3DestinationBucket}
           iamRole: {Ref: IAMRoleToAssume}
+          GithubOrgs: {Ref: ListOfGithubOrgs}
       Role:
         Fn::GetAtt:
         - LambdaExecutionRole
@@ -71,7 +93,7 @@ Resources:
               if BACKFILL_EVENT_KEY in event.keys() :
                   dates = event[BACKFILL_EVENT_KEY]
 
-              REPOS = ['alexa', 'alexa-labs', 'alexa-games']
+              ORGS = os.environ['GithubOrgs'].split(',')
               logger = logging.getLogger()
               logger.setLevel(logging.INFO) #Todo bump up to warn
 
@@ -101,7 +123,7 @@ Resources:
                   KEY_STRUCTURE_PREFIX = '{date}/traffic/{parentRepo}'#-{name}-traffic-{timestamp}.json
 
                   for date in dates:
-                      for repo in REPOS :
+                      for repo in ORGS :
                           allObjectsWithPrefix = s3Client.list_objects_v2(
                               Bucket=sourceS3Bucket,
                               Prefix=KEY_STRUCTURE_PREFIX.format(date=date, parentRepo=repo)
@@ -117,17 +139,17 @@ Resources:
                                   }
                                   s3Client.copy(copySource, destinationS3Bucket, key)
                           else:
-                              logging.warn('Failed to find contents for repo {key} on {date}'.format(key=repo, date=date))
+                              logging.warn(f'Failed to find contents for repo {repo} on {date}')
               except ClientError as e: 
                   logging.critical(e)
-                  logging.error('Failed to copy on {today}'.format(today));
+                  logging.error(f'Failed to copy on {today}');
                   return {
                       'statusCode': 500,
                       'headers': {"Content-Type": "text/plain"},
-                      'body': 'failed on {today}'.format(today=today),
+                      'body': f'failed on {today}',
                   }
               return {
                   'statusCode': 200,
                   'headers': {"Content-Type": "text/plain"},
-                  'body': 'Succeeded on {today}'.format(today=today),
+                  'body': f'Succeeded on {today}',
               }

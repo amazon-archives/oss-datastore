@@ -8,7 +8,7 @@ if __name__ == "__main__":
     """
     Verify the orgs being monitored are the ones we want
 
-    Note: Put this hear because putting it in CDK code caused failures
+    Note: Put this here because putting it in CDK code caused failures
     """
     load_dotenv(override=True)
     org_list = getenv("GITHUB_ORGS").split(",")

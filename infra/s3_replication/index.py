@@ -13,7 +13,7 @@ def replicate(event, context):
     if BACKFILL_EVENT_KEY in event.keys() :
         dates = event[BACKFILL_EVENT_KEY]
 
-    REPOS = ['alexa', 'alexa-labs', 'alexa-games']
+    ORGS = os.environ['GithubOrgs'].split(',')
     logger = logging.getLogger()
     logger.setLevel(logging.INFO) #Todo bump up to warn
 
@@ -43,7 +43,7 @@ def replicate(event, context):
         KEY_STRUCTURE_PREFIX = '{date}/traffic/{parentRepo}'#-{name}-traffic-{timestamp}.json
 
         for date in dates:
-            for repo in REPOS :
+            for repo in ORGS :
                 allObjectsWithPrefix = s3Client.list_objects_v2(
                     Bucket=sourceS3Bucket,
                     Prefix=KEY_STRUCTURE_PREFIX.format(date=date, parentRepo=repo)
@@ -59,17 +59,17 @@ def replicate(event, context):
                         }
                         s3Client.copy(copySource, destinationS3Bucket, key)
                 else:
-                    logging.warn('Failed to find contents for repo {key} on {date}'.format(key=repo, date=date))
+                    logging.warn(f'Failed to find contents for repo {repo} on {date}')
     except ClientError as e: 
         logging.critical(e)
-        logging.error('Failed to copy on {today}'.format(today));
+        logging.error(f'Failed to copy on {today}');
         return {
             'statusCode': 500,
             'headers': {"Content-Type": "text/plain"},
-            'body': 'failed on {today}'.format(today=today),
+            'body': f'failed on {today}',
         }
     return {
         'statusCode': 200,
         'headers': {"Content-Type": "text/plain"},
-        'body': 'Succeeded on {today}'.format(today=today),
+        'body': f'Succeeded on {today}',
     }
