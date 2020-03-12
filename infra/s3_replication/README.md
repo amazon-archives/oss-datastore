@@ -6,7 +6,7 @@ This section has the infrastructure and code to push to an S3 bucket that has th
 
 ### Pre-steps
 
-Before using this. Make sure there is an IAM Role that can interface with the Destination bucket in the destination account. You can see an example in `roleDefinitionDestinationExample.json`. This also requires the AWS CLI installed locally. 
+Before using this. Make sure there is an IAM Role that can interface with the Destination bucket in the destination account. You can see an example in `roleDefinitionDestinationExample.json`. A temporary version will be generated based on env vars in the next step. This also requires the AWS CLI installed locally. 
 
 ## Run the script:
 

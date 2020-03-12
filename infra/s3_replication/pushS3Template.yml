@@ -6,23 +6,18 @@ Parameters:
   S3DestinationBucket:
     Type: String
     Description: S3 Destination bucket that has allowed access to the calling role.
-    Default: ae-evangelism-github-replica
   S3SourceBucket:
     Type: String
     Description: S3 Source bucket that is in this account
-    Default: joe-test-bucket-github
   IAMRoleToAssume:
     Type: String
     Description: IAM Role to assume from the other account.
-    Default: arn:aws:iam::123456789012:role/github-replication
   ListOfGithubOrgs:
     Type: String
     Description: Comma separated string of Github organizations to use.
-    Default: alexa,alexa-labs,alexa-games
   LambdaRoleName:
     Type: String
     Description: Destination Account to push files to.
-    Default: role-123456789012
 
 Resources:
   #Roles
