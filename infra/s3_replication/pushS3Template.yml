@@ -55,6 +55,20 @@ Resources:
             - LambdaS3Replicator
             - Arn
           Id: "LambdaS3Replicator"
+   #Permission for event triggering lambda
+  LambdaEventTriggerPermission:
+    Type: AWS::Lambda::Permission
+    Properties: 
+      Action: lambda:InvokeFunction
+      FunctionName:
+        Fn::GetAtt: 
+          - LambdaS3Replicator
+          - Arn
+      Principal: "events.amazonaws.com"
+      SourceArn: 
+        Fn::GetAtt: 
+          - S3ReplicateJob
+          - Arn
   LambdaS3Replicator:
     Type: AWS::Lambda::Function
     Properties:
