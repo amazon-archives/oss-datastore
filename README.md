@@ -52,7 +52,7 @@ In order to get things setup for running thing in AWS you will need to export yo
 For more information see the [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html) docs.
 
 ## Deploying to AWS
-Due to limitations in the AWS-CDK you will need to follow [AWS Sectretsmanager Creat a Basic Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html) and set the name and secret key to 'OSS-Datastore-GitHub-Token'.
+Due to limitations in the AWS-CDK you will need to follow [AWS Sectretsmanager Create a Basic Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html) and set the name and secret key to 'OSS-Datastore-GitHub-Token'.
 All you have left to do is run the following from the root folder:
 
 > ./deploy_lambda.sh
