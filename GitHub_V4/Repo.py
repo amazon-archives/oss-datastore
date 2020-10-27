@@ -115,6 +115,13 @@ class Repo:
                   watchers (first: 100) {{
                     totalCount
                   }}
+                  languages (first: 100) {{
+                    edges {{
+                      node {{
+                        name
+                      }}
+                    }}
+                  }}
                 }}
               }}
             }}

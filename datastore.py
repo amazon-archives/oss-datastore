@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     for org_name in os.getenv("GITHUB_ORGS").split(","):
         try:
-            ghv4.write_data_for_org(org_name)
+            ghv4.write_data_for_org_disk(org_name)
         except GitHubV4Error as e:
             logging.error(e)
         ghv3.write_org_traffic(org_name)
